@@ -19,9 +19,8 @@ public class RegistrationForm {
         String favoriteProgrammingLanguage;
         String favoriteComputerScientist;
         String favoriteKeyboatdShortcut;
-        Boolean builtComputer;
+        String builtComputer;
         String favoriteSuperHero;
-
 
 
         System.out.println("What is your first name?");
@@ -42,23 +41,23 @@ public class RegistrationForm {
         System.out.println("What Country are you from?");
         country = myScanner.nextLine();
 
-        System.out.println("What is your profession?");
+        System.out.println("What is your profession? ");
         profession = myScanner.nextLine();
 
         System.out.println("What is your favorite operating system?");
         favoriteOperatingSystem = myScanner.nextLine();
 
-        System.out.println("What if your favorite programming language?");
-        favoriteProgrammingLanguage = myScanner.next();
+        System.out.println("What is your favorite programming language?");
+        favoriteProgrammingLanguage = myScanner.nextLine();
 
-        System.out.println("What if your favorite computer scientist?");
-        favoriteComputerScientist = myScanner.next();
+        System.out.println("Who is your favorite computer scientist?");
+        favoriteComputerScientist = myScanner.nextLine();
 
-        System.out.println("What if your favorite keyboard shortcut?");
-        favoriteKeyboatdShortcut = myScanner.next();
+        System.out.println("What is your favorite keyboard shortcut?");
+        favoriteKeyboatdShortcut = myScanner.nextLine();
 
         System.out.println("Have you ever built your own computer?");
-        builtComputer = myScanner.nextBoolean();
+        builtComputer = myScanner.nextLine();
 
         System.out.println("If you could be any superohero, who would it be?");
         favoriteSuperHero = myScanner.next();
@@ -75,7 +74,7 @@ public class RegistrationForm {
         System.out.println("Favorite programming language: " + favoriteProgrammingLanguage);
         System.out.println("Favorite computer scientist: " + favoriteComputerScientist);
         System.out.println("Favorite keyboard shortcut: " + favoriteKeyboatdShortcut);
-        System.out.println("Built your own computer:" + builtComputer);
+        System.out.println("Built your own computer: " + builtComputer);
         System.out.println("If you could be any superohero, it would be: " + favoriteSuperHero);
 
 
