@@ -23,8 +23,8 @@ public class LuxuryTaxCalculator {
 
         if (sum > 40000000) {
             int taxableAmount = sum - 40000000;
-
-            System.out.println("Tax rate is $" + (taxableAmount *.18));
+            double luxuryTaxCost = (taxableAmount *.18);
+            System.out.printf("Tax rate is $%.2f", luxuryTaxCost);
         }
 
 
