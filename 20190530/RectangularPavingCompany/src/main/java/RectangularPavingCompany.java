@@ -23,13 +23,11 @@ public class RectangularPavingCompany {
 
         // Cement $12.50/square foot
         double cementCost = (areaOfDriveway * 12.50);
-        System.out.printf("The cost of the cement will be $" + cementCost);
+        System.out.printf("The cost of the cement will be $ %.2f \n", cementCost);
 
         // framing/footers $8.25/linear foot
         double framingCost = (perimeterOfDriveway * 8.50);
-        System.out.printf("The cost of the framing footers will be $ " + framingCost);
-
-
+        System.out.printf("The cost of the framing footers will be %.2f \n ", framingCost);
 
     }
 }

@@ -22,19 +22,22 @@ public class RectangularPavingCompany2 {
         costOfFooting = Double.parseDouble(myScanner.nextLine());
 
         // area of rectangle is length * width
-        int areaOfDriveway = (widthFeet * lengthFeet);
+        double areaOfDriveway = (widthFeet * lengthFeet);
         System.out.println("The area of the driveway is " + areaOfDriveway + " feet.");
 
         // perimeter of rectangle is 2(length  + width)
-        int perimeterOfDriveway = 2*(widthFeet + lengthFeet);
+        double perimeterOfDriveway = 2*(widthFeet + lengthFeet);
         System.out.println("The perimeter of the driveway is " + perimeterOfDriveway + " feet.");
 
         // Cement cost what user says it cost
         double cementCost = (areaOfDriveway * costOfCement);
-        System.out.printf("The cost of the cement will be %.2f \n", cementCost);
+        System.out.printf("The cost of the cement will be $%.2f \n", cementCost);
 
         // framing/footers cost what user says it cost
         double framingCost = (perimeterOfDriveway * costOfFooting);
-        System.out.printf("The cost of the framing footers will be %.2f \n", framingCost);
+        System.out.printf("The cost of the framing footers will be $%.2f \n", framingCost);
+
+        //System.out.printf("The cost of the framing footers will be %.2f \n ", framingCost);
+
     }
 }
