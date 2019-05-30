@@ -1,1 +1,3 @@
-# JavaBootcamp2
+# JavaBootcamp
+
+Repo for Java Katas homework. 
