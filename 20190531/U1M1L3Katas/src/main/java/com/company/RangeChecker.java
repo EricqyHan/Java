@@ -7,16 +7,16 @@ public class RangeChecker {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
 
-        String userInput;
-        int userNumber;
+        int userInput;
 
         do {
             System.out.println("Pick a number between 15 and 32");
+            userInput = Integer.parseInt(myScanner.nextLine());
 
-            userInput = myScanner.nextLine();
-            userNumber = Integer.parseInt(userInput);
-        } while (userNumber < 16 || userNumber > 31);
-
-
+            if (userInput > 15 && userInput < 32) {
+                System.out.println("You entered " + userInput + ".");
+            }
+        } while (userInput < 16 || userInput > 31);
     }
 }
+
