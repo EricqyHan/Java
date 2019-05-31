@@ -7,19 +7,15 @@ public class FavoriteProgrammingLanguage {
     public static void main(String[] args) {
     Scanner myScanner = new Scanner(System.in);
 
-    String favoriteProgrammingLanguage;
+    String userInput;
 
-
-        System.out.println("What is your favorite programming language?");
-        favoriteProgrammingLanguage = myScanner.nextLine();
-
-//        if (favoriteProgrammingLanguage == "java") {
-//            System.out.println("That's what I was looking for! Java is definitely the answer!");
-//        } else
 
         do {
-
-        }while(favoriteProgrammingLanguage != "Java");
+            System.out.println("What is your favorite programming language?");
+            userInput = myScanner.nextLine();
+        }while (!userInput.equals("Java")); {
+            System.out.println("That's what I was looking for! Java is definitely the answer!");
+        }
 
 
     }
