@@ -1,122 +1,84 @@
 package com.company;
 
-import java.util.Scanner;
-
 public class App {
 
-    public static void main(String[] args) {
-        int[] arr = getArrayInput();
+    // note use of index in place of i b/c of Bill's suggestion to learn to think that way
 
-        System.out.println("Sum of numbers is " + total(arr));
-
-        //System.out.print("Arrays reverse is " + reverse(arr));
-        //System.out.println("Arrays reverse is " + concatString(arr));
-
-    }
-
-    //[] will return an array in a method
-    public static int[] getArrayInput() {
-        Scanner myScanner = new Scanner(System.in);
-
-        System.out.println("Enter number of inputs : ");
-        int arraySize = Integer.parseInt(myScanner.nextLine());
-
-        int[] arrayInput = new int[arraySize];
-
-        for (int i = 0; i < arrayInput.length; i++) {
-            System.out.println("Enter your number : (" + (i + 1) + ")");
-            arrayInput[i] = Integer.parseInt(myScanner.nextLine());
-        }
-        return arrayInput;
-    }
-
-
-
-    // total is good
     public static int total(int[] arr) {
         int sum = 0;
-        for (int i : arr) {
-            sum = sum + i;
+        for (int index : arr) {
+            sum = sum + index;
         }
         return sum;
     }
 
-
-    // odd is still in progress
     public static int totalOdd(int[] arr) {
-        int sum = arr[1]; // we are setting it to first number in array
-        // ex: int[]arr = [1,7, 8,2, 15,14]
-        // sum starts at 1 now because we are doing odd indexes
-        for (int i = 3; i < arr.length; i += 2) {
-            if (i % 2 != 0) {
-                sum += arr[i];
+        int sum = arr[1]; // start at index of 1 since 1 is odd and we are going by index and not number "value"
+        for (int index = 3; index < arr.length; index += 2) { // we will continue from the 3rd index
+            if (index % 2 != 0) { // index / 2 remainder is not equal to 0
+                sum += arr[index];
             }
         }
         return sum;
     }
+
 
     public static int totalEven(int[] arr) {
-        int sum = arr[0];
-        for (int i = 2; i < arr.length; i += 2) {
-            if (i % 2 == 0) {
-                sum += arr[i];
+        int sum = arr[0]; // Start at index of 0 since 0 is even and we are going by index of
+        for (int index = 2; index < arr.length; index += 2) { // we will continue from the 2 index since it is even
+            if (index % 2 == 0) { // index /2 remainder is even
+                sum += arr[index];
             }
         }
         return sum;
     }
 
-
     public static int secondLargestNumber(int[] arr) {
-        int biggest = arr[0];
-        int secondBiggest = arr[1];
-        if (biggest < secondBiggest) {
-            biggest = arr[1];
-            secondBiggest = arr[0];
+        int large = arr[0]; // largest number is at an index of 0
+        int secondLarge = arr[1]; // second largest number is at array of 1
+        if (large < secondLarge) { // if the largest is less than the second largest ...
+            large = arr[1]; // we swap places and now it is the second largest
+            secondLarge = arr[0]; // after swapping places it is now the largest
         }
-        for (int i = 2; i < arr.length; i++) {
-            if (arr[i] > biggest) {
-                secondBiggest = biggest;
-                biggest = arr[i];
-            } else if (arr[i] > secondBiggest) {
-                secondBiggest = arr[i];
+        for (int i = 2; i < arr.length; i++) { //starting at second index since first two were settled
+            if (arr[i] > large) {
+                secondLarge = large;
+                large = arr[i];
+            } else if (arr[i] > secondLarge) {
+                secondLarge = arr[i];        // loop for checking one by one
             }
         }
-        return secondBiggest;
+        return secondLarge;
     }
 
-
-    public static String[] swapFirstAndLast(String[] arr){
-        String first = arr[arr.length - 1]; // last character in array (so it last spot minus 1)
-        String  last = arr[0]; // become first in array
+    public static String[] swapFirstAndLast(String[] arr) {
+        String first = arr[arr.length - 1]; // last character in array (so it is last spot -1 ... becuase of 0 in arrays)
+        String last = arr[0]; // becomes first in array
         arr[0] = first;
-        arr[arr.length-1] = last;
+        arr[arr.length - 1] = last;
         return arr;
     }
 
-    public static int[] reverse(int[] arr){
-        for (int index = 0; index < arr.length /2; index++){
-            int j = arr[arr.length -1 -index];
-
-            int k = arr[index];
-            arr[index] = j;
-            arr[arr.length - 1 - index] = k;
-        }
-        return arr;
-    }
+//    public static int[] reverse(int[] arr) {
+//
+//    }
 
 
-    public static String[] concatensateStrings(String[] arr) {
-        String concat = arr[0];
-        for (String i = 0; )
-    }
+//    public static String[] concatenateString(String arr){
+//    String stringArrays = " ";
+//    for (String concatenateString: stringArrays) {  // read as for each concatenateString in arr;
+//    stringArrays = concatenateString + arr;
+//    }
+//    return stringArrays;
+//    }
 
 
     public static int[] everyThird(int[] arr) {
-        if (arr.length < 3) {
+        if (arr.length < 3) { // if array is less than 3 return null
             return null;
-        } // if arr.length is less than 3, cannot even complete and dont forget edge cases
+        } // note that if arr.length is less than 3, cannot even complete
         int counter = 0;
-        int[] newArray = new int[arr.length / 3];
+        int[] newArray = new int[arr.length /3];
         for (int i = 2; i < arr.length; i += 3) {
             newArray[counter] = arr[i];
             counter++;
@@ -125,19 +87,13 @@ public class App {
     }
 
 
-//    public static int reverse(int[] arr){
-//        int reversed = 0;
-//
-//        for(int i = arr.length-1; i >= 0; i--) {
-//            System.out.print(arr[i] + "");
+//    public static int[] lessThanFive(int[] arr) {
+//        int sum = 0;
+//        for (element : arr) {
+//            System.out.println();
 //        }
-//        return reversed;
 //    }
 
-    //Create a method called concatenateString which takes in an array of strings and returns a String which consists of the
-    //concatenation of all elements in the array. Your code should work for an array of any size.
-
-
-
-
 }
+
+
