@@ -5,13 +5,13 @@ public class FizzBuzz {
 
         for (int i = 0; i <= 100; i++) {
             if ((i%15) == 0) {
-                System.out.println("FIZZBUZZ");
+                System.out.print("FIZZBUZZ" "\n");
             } else if ((i%5) == 0) {
-                System.out.println("BUZZ");
+                System.out.print("BUZZ" + "\n");
             } else if ((i%3) == 0) {
-                System.out.println("Fizz");
+                System.out.print("FIZZ" + "\n");
             } else {
-                System.out.println(i);
+                System.out.print(i);
             }
         }
 

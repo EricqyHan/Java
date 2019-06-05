@@ -24,7 +24,7 @@ public class AverageThree {
 
         int sum  = (firstInput + secondInput + thirdInput);
         float average = sum / 3.0f;
-        System.out.printf("%.2f", average);
+        System.out.printf( "%.2f", average);
 
 
     }

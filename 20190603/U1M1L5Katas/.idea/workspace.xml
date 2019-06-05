@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6aec519-12a2-4c4a-85a3-7c3532ea8bff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.localized" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../activities/01-Hi-Lo/.idea/01-Hi-Lo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../activities/01-Hi-Lo/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../activities/01-Hi-Lo/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../keyboard-shortcuts-macos.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../~$CodingPal.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rsvp2.0/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rsvp2.0/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rsvp2.0/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rsvp2.0/images/header-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rsvp2.0/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190530/LuxuryTaxCalculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190530/LuxuryTaxCalculator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190530/RectangularPavingCompany/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190530/RectangularPavingCompany/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190530/U1M1L2Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190530/U1M1L2Katas/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190530/U1M1L2Katas/src/main/java/com/company/AverageThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190530/U1M1L2Katas/src/main/java/com/company/AverageThree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190531/03-Fizz-Buzz/starter-code/FizzBuzz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190531/03-Fizz-Buzz/starter-code/FizzBuzz/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190531/03-Fizz-Buzz/starter-code/FizzBuzz/src/main/java/com/company/FizzBuzz.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190531/03-Fizz-Buzz/starter-code/FizzBuzz/src/main/java/com/company/FizzBuzz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190531/05-Prime-Finder/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190531/05-Prime-Finder/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190531/05-Prime-Finder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190531/05-Prime-Finder/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190531/U1M1L3Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190531/U1M1L3Katas/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,19 +23,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="450">
+              <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
               <folding>
                 <element signature="e#86#87#0" expanded="true" />
-                <element signature="e#113#114#0" expanded="true" />
+                <element signature="e#112#113#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -45,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/company/AppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+            <state>
+              <caret selection-end-line="51" />
             </state>
           </provider>
         </entry>
@@ -54,7 +52,7 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -88,6 +86,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -105,57 +104,15 @@
               <item name="U1M1L5Katas" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="U1-M1-L5-katas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="U1M1L5Katas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="U1-M1-L5-katas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="U1M1L5Katas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="U1-M1-L5-katas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="U1M1L5Katas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="U1-M1-L5-katas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="U1M1L5Katas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="U1-M1-L5-katas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="U1M1L5Katas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="U1-M1-L5-katas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="U1M1L5Katas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
@@ -213,19 +170,20 @@
     <history-entry file="AppTest - 2019.05.31 at 21h 45m 19s.xml">
       <configuration name="AppTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AppTest - 2019.06.02 at 18h 58m 52s.xml">
+      <configuration name="AppTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32941177" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32941177" />
@@ -236,6 +194,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32941177" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -261,18 +220,18 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/com/company/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        <state>
+          <caret selection-end-line="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="450">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
           <folding>
             <element signature="e#86#87#0" expanded="true" />
-            <element signature="e#113#114#0" expanded="true" />
+            <element signature="e#112#113#0" expanded="true" />
           </folding>
         </state>
       </provider>
