@@ -20,7 +20,9 @@ public class HiLoWithLimitedTries {
         int userGuess;
         int numberOfGuessesLeft = 6;
 
-        while( !guess && numberOfGuessesLeft == 0) {
+        //System.out.println("Computer guess is " + compGuess); // testing what the computer is
+
+        while( !guess && numberOfGuessesLeft > 0) {
 
             System.out.println("Guess a number: ");
             userGuess = Integer.parseInt(myScanner.nextLine());
@@ -37,8 +39,11 @@ public class HiLoWithLimitedTries {
             } else {
                 guess = true;
             }
+
+            if(numberOfGuessesLeft <= 0) {
+                System.out.println("Sorry, you didn't guess it in 7 tries. You lose.");
+            }
         }
-        System.out.println("You guessed it! What are the odds?");
 
 ;
     }
