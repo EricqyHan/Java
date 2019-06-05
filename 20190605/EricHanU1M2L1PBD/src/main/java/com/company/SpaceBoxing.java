@@ -15,12 +15,8 @@ public class SpaceBoxing {
 
         System.out.println("Which Planet are you visiting?");
 
-        System.out.println("1. Venus");
-
-//        String[][] newarr = {
-//                {"1. Venus", "2. Mars", "3. Jumpiter"},
-//                {"4. Saturn", "5. Uranus", "6. Neptune"}
-//        };
+        System.out.println("1. Venus, 2. Mars, 3 Jupiter");
+        System.out.println("1. Saturn, 2. Uranus, 3 Neptune");
 
 
         String userInput = myScanner.nextLine();

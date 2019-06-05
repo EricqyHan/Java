@@ -6,37 +6,39 @@ public class ModulusAnimation {
     {
         for ( int i=0; i<80; i++ ) // go through loop 80 times. What ever number we pick (i < 80)  we need to have that many steps
         {
-            if ( i%20 == 0 )  // if i mod 10 = 0, remember i goes from 0 to 80. 0 mod 10 is 0.
+            if ( i%17 == 0 )  // if i mod 10 = 0, remember i goes from 0 to 80. 0 mod 10 is 0.
                 System.out.print(" Java                 \r");
-            else if ( i%16 == 1 )
+            else if ( i%17 == 1 )
                 System.out.print("   Java               \r");
-            else if ( i%16 == 2 )
+            else if ( i%17 == 2 )
                 System.out.print("     Java             \r");
-            else if ( i%16 == 3 )
+            else if ( i%17 == 3 )
                 System.out.print("       Java           \r");
-            else if ( i%16 == 4 )
+            else if ( i%17 == 4 )
                 System.out.print("         Java         \r");
-            else if ( i%16 == 5 )
+            else if ( i%17 == 5 )
                 System.out.print("           Java       \r");
-            else if ( i%16 == 6 )
+            else if ( i%17 == 6 )
                 System.out.print("             Java     \r");
-            else if ( i%16 == 7 )
+            else if ( i%17 == 7 )
                 System.out.print("               Java   \r");
-            else if ( i%16 == 8 )
+            else if ( i%17 == 8 )
                 System.out.print("                 Java \r");
-            else if ( i%16 == 9 )
-                System.out.print("                Java  \r");
-            else if ( i%16 == 10 )
+            else if ( i%17 == 9 )
                 System.out.print("               Java   \r");
-            else if ( i%16 == 11 )
+            else if ( i%17 == 10 )
+                System.out.print("             Java     \r");
+            else if ( i%17 == 11 )
                 System.out.print("           Java       \r");
-            else if ( i%16 == 12 )
+            else if ( i%17 == 12 )
                 System.out.print("         Java         \r");
-            else if ( i%16 == 13 )
+            else if ( i%17 == 13 )
                 System.out.print("       Java           \r");
-            else if ( i%16 == 14 )
+            else if ( i%17 == 14 )
                 System.out.print("     Java             \r");
-            else if ( i%16 == 15 )
+            else if ( i%17 == 15 )
+                System.out.print("   Java               \r");
+            else if ( i%17 == 16 )
                 System.out.print(" Java                 \r");
 
             Thread.sleep(200);

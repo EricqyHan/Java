@@ -18,17 +18,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/ModulusAnimation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+            <state relative-caret-position="158">
+              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/HiLoWithLimitedTries.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="22" column="95" selection-start-line="22" selection-start-column="95" selection-end-line="22" selection-end-column="95" />
+            <state relative-caret-position="528">
+              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/SpaceBoxing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="280">
+              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -110,10 +110,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/company/KeepGuessing.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/company/NumberGuessingWithACounter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/company/Mod3.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/company/SpaceBoxing.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/company/ModulusAnimation2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/company/ModulusAnimation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/company/HiLoWithLimitedTries.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/company/ModulusAnimation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/company/SpaceBoxing.java" />
       </list>
     </option>
   </component>
@@ -200,7 +200,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.HiLoWithLimitedTries">
+  <component name="RunManager" selected="Application.ModulusAnimation">
     <configuration name="FortuneCookie" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.FortuneCookie" />
       <module name="PBD" />
@@ -268,8 +268,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HiLoWithLimitedTries" />
         <item itemvalue="Application.ModulusAnimation" />
+        <item itemvalue="Application.HiLoWithLimitedTries" />
         <item itemvalue="Application.SpaceBoxing" />
         <item itemvalue="Application.NumberGuessingWithACounter" />
         <item itemvalue="Application.FortuneCookie" />
@@ -356,13 +356,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/SpaceBoxing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/FortuneCookie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -406,18 +399,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/ModulusAnimation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+        <state relative-caret-position="158">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/HiLoWithLimitedTries.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="22" column="95" selection-start-line="22" selection-start-column="95" selection-end-line="22" selection-end-column="95" />
+        <state relative-caret-position="528">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/SpaceBoxing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
         </state>
       </provider>
     </entry>
