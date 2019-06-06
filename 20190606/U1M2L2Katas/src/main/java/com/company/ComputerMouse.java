@@ -6,57 +6,58 @@ public class ComputerMouse {
     private String model;
     private int xPosition;
     private int yPosition;
-    private int lastClicked;
+    private int[] lastClickedLocation;
 
 
-    public ComputerMouse(String manufacturer, String model, int xPosition, int yPosition, int lastClickec){
+    public ComputerMouse(String manufacturer, String model, int xPosition, int yPosition, int[] lastClickedLocation) {
         this.manufacturer = manufacturer;
         this.model = model;
         this.xPosition = xPosition;
         this.yPosition = yPosition;
-        this.lastClicked = lastClickec;
+        this.lastClickedLocation = lastClickedLocation;
     }
 
-    //getters
-    public String getManufacturer(){
+    public String getManufacturer() {
         return manufacturer;
     }
 
-    //setters
-    public void setManufacturer(String manufacturer){
+
+    public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
     }
 
-    //getters
-    public String getModel(){
+    public String getModel() {
         return model;
     }
 
-    //setters
-    public void setModel(String model){
+    public void setModel(String model) {
         this.model = model;
     }
 
-    //getters
-    public int getxPosition(){
+
+    public int getxPosition() {
         return xPosition;
     }
 
-    public void setxPosition(int xPosition){
+    public void setxPosition(int xPosition) {
         this.xPosition = xPosition;
     }
 
-    //getters
-    public int getyPosition(){
+    public int getyPosition() {
         return yPosition;
     }
 
-    public void setyPosition(int yPosition){
+    public void setyPosition(int yPosition) {
         this.yPosition = yPosition;
     }
 
 
+    public int[] getLastClickedLocation() {
+        return lastClickedLocation;
+    }
 
 
-
+    public void setLastClickedLocation(int[] lastClickedLocation) {
+        this.lastClickedLocation = lastClickedLocation;
+    }
 }
