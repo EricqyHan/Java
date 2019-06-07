@@ -7,16 +7,20 @@ public class AddingValuesInALoop {
         Scanner myScanner = new Scanner(System.in);
 
         System.out.println("I will add up the numbers you give me. ");
-        String userInput = myScanner.nextLine();
-        int addValues = Integer.parseInt(userInput);
+        System.out.println("Number: ");
 
+        int addValues;
+        int sum = 0;
+
+        addValues = myScanner.nextInt();
 
         while(addValues != 0){
+            sum = sum + addValues;
             System.out.println("Number: ");
-            userInput = myScanner.nextLine();
-            addValues = Integer.parseInt(userInput);
+            addValues = myScanner.nextInt();
+            System.out.println("The total number so far is : " + (sum + addValues));
         }
-        System.out.println("The total is: " + addValues);
+        System.out.println("The total is: " + sum);
     }
 
 }
