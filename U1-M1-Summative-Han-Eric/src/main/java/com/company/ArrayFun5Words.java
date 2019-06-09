@@ -1,17 +1,23 @@
 package com.company;
 
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class ArrayFun5Words {
     public static void main(String[] args) {
-        String[] cars = {"Volvo", "BMW", "Ford", " Mazda"};
+        Scanner myScanner = new Scanner(System.in);
+        String[] array = new String[5];
 
-//        for (i - 0; i < cars.length; i ++){
-//            System.out.println(cars[i] + ", ");
-//        }
+        System.out.println("Enter five words");
 
-        for (String i : cars){
-            System.out.print(i + ", ");
+        for (int i = 0; i < array.length; i++){
+            System.out.println("Enter word " + (i+1) + ": ");
+            array[i] = myScanner.nextLine();
         }
+
+        for (String arrays: array){
+            System.out.print(arrays + " ");
+        }
+
+
     }
 }
