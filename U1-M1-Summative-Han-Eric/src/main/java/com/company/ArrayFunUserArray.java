@@ -5,18 +5,19 @@ import java.util.Scanner;
 public class ArrayFunUserArray {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
-        System.out.println("Enter five numbers: ");
-        int num = 5;
-        int numbers[] = new int[num];
+        int[] array = new int[5];
 
-        System.out.println("Enter the " + num + " numbers now.");
+        System.out.println("Enter five numbers");
 
-        for(int i = 1; i < numbers.length+1; i++){
-            System.out.println("Enter number " + i + ": ");
-            numbers[i] = myScanner.nextInt();
+        for (int i = 0; i < array.length; i++){
+            System.out.println("Enter number " + (i+1) + ": ");
+            array[i] = Integer.parseInt(myScanner.nextLine());
         }
 
-        System.out.println("These are the numbers you have entered. ");
+        for (int arrays: array){
+            System.out.print(arrays + " ");
+        }
+
 
     }
 }
