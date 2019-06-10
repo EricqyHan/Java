@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MonthConverterSwitch {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
-        System.out.println("Enter a nummber between 1 and 12.");
+        System.out.println("Enter a number between 1 and 12.");
         String inputMonth = myScanner.nextLine();
 
         int userInput = Integer.parseInt(inputMonth);
@@ -13,7 +13,7 @@ public class MonthConverterSwitch {
         if (userInput == 1) {
             System.out.println("January");
         } else if (userInput == 2) {
-            System.out.println("Febraury");
+            System.out.println("February");
         } else if (userInput == 3) {
             System.out.println("March");
         } else if (userInput == 4) {

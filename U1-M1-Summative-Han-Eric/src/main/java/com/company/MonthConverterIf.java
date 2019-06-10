@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class MonthlyConverterIf {
+public class MonthConverterIf {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in); // I
 
