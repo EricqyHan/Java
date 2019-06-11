@@ -9,18 +9,22 @@ public class BabyNim {
         int a = 3;
         int b = 3;
         int c = 3;
-
-        String userinput = myScanner.nextLine();
+        int removeFrom;
+        String userinput;
 
         do{
             System.out.println("Choose a pile: ");
             userinput = myScanner.nextLine();
+            System.out.println("How many to remove from pile " + userinput);
+            removeFrom = Integer.parseInt(myScanner.nextLine());
+
+
             if (userinput.equals("a")) {
-                a--;
+                a = a - removeFrom;
             } else if (userinput.equals("b")) {
-                b--;
+                b = a - removeFrom;
             } else if (userinput.equals("c")) {
-                c--;
+                c = c - removeFrom;
             } else {
                 System.out.println("Pile invalid. Select another pile.");
             }
