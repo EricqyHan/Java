@@ -1,7 +1,9 @@
 package com.company;
 
-public class ReverseAndPrint {
+import java.util.ArrayList;
+import java.util.LinkedList;
 
+public class ReversedAndPrintLinked {
     public static void main(String[] args) {
 
         int [] numbers = {2, 4, 5, 3,
@@ -12,8 +14,11 @@ public class ReverseAndPrint {
         System.out.println("Normal");
         System.out.println("--------------");
 
+        LinkedList<Integer> numberList = new LinkedList<Integer>();
+
         for(int element : numbers) {
             System.out.println(element);
+            numberList.add(element);
         }
 
         int[] reversed = new int[numbers.length];
@@ -28,7 +33,7 @@ public class ReverseAndPrint {
 
         for(int element : reversed) {
             System.out.println(element);
+            numberList.add(element);
         }
     }
-
 }

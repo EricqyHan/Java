@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Total {
 
     public static void main(String[] args) {
@@ -10,8 +12,12 @@ public class Total {
 
         int total = 0;
 
+        ArrayList<Integer> numberList = new ArrayList<Integer>();
+
+
         for(int element : numbers) {
-          total += element;
+            total += element;
+            numberList.add(element);
         }
 
         System.out.println("The sum of all elements in the array is " + total);

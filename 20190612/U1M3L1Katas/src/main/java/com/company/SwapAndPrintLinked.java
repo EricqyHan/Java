@@ -1,6 +1,9 @@
 package com.company;
 
-public class SwapAndPrint {
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class SwapAndPrintLinked {
 
     public static void main(String[] args) {
 
@@ -10,9 +13,12 @@ public class SwapAndPrint {
 
         System.out.println("----------------");
         System.out.println("Original Array");
+        LinkedList<Integer> newNumberList = new LinkedList<Integer>();
+
 
         for(int element : numbers) {
             System.out.println(element);
+            newNumberList.add(element);
         }
 
         int temp = numbers[0];
@@ -24,8 +30,8 @@ public class SwapAndPrint {
 
         for(int element : numbers) {
             System.out.println(element);
+            newNumberList.add(element);
         }
 
     }
-
 }
