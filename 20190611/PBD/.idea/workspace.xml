@@ -8,10 +8,7 @@
       <change beforePath="$PROJECT_DIR$/../../20190607/UserIO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190607/UserIO/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../20190610/U1M2L6Katas/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190610/U1M2L6Katas/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../20190610/U1M2L6Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190610/U1M2L6Katas/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/BabyNim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/BabyNim.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/Nim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Nim.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/Nim2.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../U1-M1-Summative-Han-Eric/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M1-Summative-Han-Eric/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/BabyNim.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            <state relative-caret-position="528">
+              <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -39,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Nim.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="57" column="49" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
+            <state relative-caret-position="596">
+              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
             </state>
           </provider>
         </entry>
@@ -146,7 +143,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Nim2">
+  <component name="RunManager" selected="Application.Nim">
     <configuration name="BabyNim" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.BabyNim" />
       <module name="PBD" />
@@ -248,9 +245,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Nim" />
         <item itemvalue="Application.Nim2" />
         <item itemvalue="Application.BabyNim" />
-        <item itemvalue="Application.Nim" />
         <item itemvalue="Application.BabyNim_63b" />
       </list>
     </recent_temporary>
@@ -272,7 +269,7 @@
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1904762" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1904762" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -281,7 +278,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.18395722" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18395722" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -320,15 +317,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/BabyNim.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        <state relative-caret-position="528">
+          <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Nim.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="57" column="49" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
+        <state relative-caret-position="596">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
         </state>
       </provider>
     </entry>

@@ -55,7 +55,7 @@ public class Nim {
             }
             System.out.println(" A : " + a + "| B : " + b + "| C : " + c);
 
-        }  while((a != 0) && (b != 0) && (c != 0));{
+        }  while((a != 0) || (b != 0) || (c != 0));{
             System.out.println("All piles are empty. Good Job!");
         }
     }
