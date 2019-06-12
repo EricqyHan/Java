@@ -1,9 +1,6 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class CarLists {
 
@@ -65,11 +62,21 @@ public class CarLists {
         //iv Store all 3 list in a map with the manufacturer inside your map
         //Set<Map.Entry<String, String>> baseballEntries = baseballTeam.entrySet();
 
-        for(Map.Entry<String, String> entry : baseballEntries){
-            System.out.println("Key - " + entry.getKey() + " - Value " + entry.getValue());
-        }
+        Map<String, String> carList = new HashMap<>();
+        //Toyota
+        carList.put("Toyota", "Camry");
+        carList.put("Toyota", "Corolla");
+        carList.put("Toyota", "Highlander");
+        //Ford
+        carList.put("Ford", "Fusion");
+        carList.put("Ford", "Mustang");
+        carList.put("Ford", "Taurus");
+        //honda
+        carList.put("Honda", "Accord");
+        carList.put("Honda", "Civic");
+        carList.put("Honda", "Fit");
 
 
 
-        }
+    }
     }

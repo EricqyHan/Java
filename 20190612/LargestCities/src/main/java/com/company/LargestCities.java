@@ -17,7 +17,7 @@ public class LargestCities {
 
         // 3. Create a map that holds the names of states and their corresponding city object
         Map<String, City> cities = new HashMap<>();
-
+    // adding - "putting" keys in states
         cities.put("New York", newYork);
         cities.put("California", losAngeles);
         cities.put("Illinois", chicago);
@@ -35,6 +35,7 @@ public class LargestCities {
 
         Set<String> keys = cities.keySet();
 
+        //enhanced for loop for for getting a population that is greater than the input
         for(String key : keys) {
             if(cities.get(key).getPopulation() > popLimit) {
                 System.out.println(key + " : " + cities.get(key).getName());
