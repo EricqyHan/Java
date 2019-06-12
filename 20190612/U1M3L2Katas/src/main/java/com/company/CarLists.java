@@ -1,5 +1,10 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 public class CarLists {
 
     public static void main(String[] args) {
@@ -15,5 +20,56 @@ public class CarLists {
         Car accord = new Car("Honda", "Accord");
         Car civic = new Car("Honda", "Civic");
         Car fit = new Car("Honda", "Fit");
+
+        List<String> myList = new ArrayList<>();
+
+        //i Create a list called toyotaList to hold all the Car variables with"Toyota"
+        // as the manufacture and add them to the list
+
+        System.out.println("Toyota List");
+        List<Car> toyotaList = new ArrayList<>();
+        toyotaList.add(camry);
+        toyotaList.add(corolla);
+        toyotaList.add(highlander);
+        for (Car temp : toyotaList) {
+            System.out.println("Make: " + temp.getMake() + "   Model: " + temp.getModel());
+        }
+        System.out.printf(" %n");
+
+        //ii Create a list called fordList to hold all the Car variables with"Ford"
+        // as the manufacture and add them to the list
+
+        System.out.println("Ford List");
+        List<Car> fordList = new ArrayList<>();
+        fordList.add(fusion);
+        fordList.add(mustang);
+        fordList.add(taurus);
+
+        for (Car temp : fordList) {
+            System.out.println("Make: " + temp.getMake() + "   Model: " + temp.getModel());
+        }
+        System.out.printf(" %n");
+
+        //iii Create a list called hondaList to hold all the Car variables with"Honda"
+        // as the manufacture and add them to the list
+
+        System.out.println("Honda List");
+        List<Car> hondaList = new ArrayList<>();
+        hondaList.add(accord);
+        hondaList.add(civic);
+        hondaList.add(fit);
+        for (Car temp : hondaList) {
+            System.out.println("Make: " + temp.getMake() + "   Model: " + temp.getModel());
+        }
+
+        //iv Store all 3 list in a map with the manufacturer inside your map
+        //Set<Map.Entry<String, String>> baseballEntries = baseballTeam.entrySet();
+
+        for(Map.Entry<String, String> entry : baseballEntries){
+            System.out.println("Key - " + entry.getKey() + " - Value " + entry.getValue());
+        }
+
+
+
+        }
     }
-}
