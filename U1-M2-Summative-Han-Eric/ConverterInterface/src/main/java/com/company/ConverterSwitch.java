@@ -31,7 +31,7 @@ public class ConverterSwitch implements Converter {
                 return "November";
             case 12:
                 return "December";
-            default: return "You have entered an invalid number. You must enter a number between 1 and 12. Goodbye.";
+            default: return "You have entered an invalid number. You must enter a number from 1 to 12. Goodbye.";
         }
     }
 
@@ -54,7 +54,7 @@ public class ConverterSwitch implements Converter {
             case 7:
                 return "Saturday";
             default:
-                return "You have entered an invalid number. You must enter a number between 1 and 12. Goodbye.";
+                return "You have entered an invalid number. You must enter a number from 1 to 12. Goodbye.";
         }
     }
 

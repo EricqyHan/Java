@@ -33,7 +33,7 @@ public class ConverterIf implements Converter {
         } else if (monthNumber == 12) {
             return "December";
         } else {
-            return "You have entered an invalid number. You must enter a number between 1 and 12. Goodbye.";
+            return "You have entered an invalid number. You must enter a number from 1 to 12. Goodbye.";
         }
     }
 
@@ -54,10 +54,7 @@ public class ConverterIf implements Converter {
         } else if (dayNumber == 7) {
             return "Saturday";
         } else {
-            return "You have entered an invalid number. You must enter a number between 1 and 12. Goodbye.";
+            return "You have entered an invalid number. You must enter a number from 1 to 12. Goodbye.";
         }
     }
-
-
-
 }
