@@ -5,6 +5,5 @@ Constable constableZuvio = new Constable("Constable Zuvio", 60, 100, 60, 20, 5, 
 Warrior jangoFett = new Warrior("Jango Fett", 75, 100, 100, 50, 10,100);
 
 
-
     }
 }

@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ea30e0f-18a1-46cd-bf09-3f5192979c6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../InClassCar/InClassCar.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../InClassCar/src/main/java/com/company/CarInventory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConverterInterface/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConverterInterface/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConverterInterface/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RPGInheritance/RPGInheritance.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../20190530/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190530/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../20190531/U1M1L3Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190531/U1M1L3Katas/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../20190605/EricHanU1M2L1PBD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190605/EricHanU1M2L1PBD/.idea/workspace.xml" afterDir="false" />
@@ -22,6 +16,8 @@
       <change beforePath="$PROJECT_DIR$/../20190612/U1M3L2Katas/src/main/java/com/company/CarLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20190612/U1M3L2Katas/src/main/java/com/company/CarLists.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../20190613/U1M3L3Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190613/U1M3L3Katas/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ConverterInterface/ConverterInterface.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../InClassCar/InClassCar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../InClassCar/InClassCar.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../InClassCar/src/main/java/com/company/CarInventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../InClassCar/src/main/java/com/company/CarInventory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PBDS/PBDS.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/src/main/java/com/company/ArrayFun5Words.java" beforeDir="false" afterPath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/src/main/java/com/company/ArrayFun5Words.java" afterDir="false" />
@@ -29,6 +25,7 @@
       <change beforePath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/src/main/java/com/company/MonthConverterSwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/src/main/java/com/company/MonthConverterSwitch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/src/main/java/com/company/SomeMath.java" beforeDir="false" afterPath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/src/main/java/com/company/SomeMath.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/src/main/java/com/company/ValidNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/src/main/java/com/company/ValidNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../comcompanyConverterInterface/ConverterInterface.iml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,7 +39,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -63,9 +60,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="-1057" />
-    <option name="width" value="1920" />
-    <option name="height" value="1027" />
+    <option name="x" value="210" />
+    <option name="y" value="151" />
+    <option name="width" value="1260" />
+    <option name="height" value="771" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -73,6 +71,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CalculatorObject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="U1-M2-Summative-Han-Eric" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -90,20 +99,10 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CalculatorObject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="U1-M2-Summative-Han-Eric" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
@@ -133,9 +132,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-1057" width="1920" height="1027" extended-state="0" />
+    <frame x="210" y="151" width="1260" height="771" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22257721" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22577997" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -164,28 +163,10 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/CalculatorObject/src/main/java/com/company/getRId">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/CalculatorObject/src/main/java/com/company/getRId" />
     <entry file="file://$PROJECT_DIR$/CalculatorObject/src/main/java/com/company/ObjectMain.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CalculateObjectOld/src/main/java/com/company/CalculatorObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-52">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-          <folding>
-            <element signature="e#537#538#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#634#635#0" expanded="true" />
-            <element signature="e#676#677#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#771#772#0" expanded="true" />
-            <element signature="e#825#826#0" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/CalculateObjectOld/src/main/java/com/company/CalculatorObject.java" />
   </component>
 </project>
