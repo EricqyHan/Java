@@ -18,3 +18,6 @@ public class ValidNumber {
         System.out.println(userNumber);
     }
 }
+
+//use a while loop because if my first entry is a number between 1 and 10 then it automatically prints and if not
+// then it goes inside

@@ -7,16 +7,18 @@ public class SomeMath {
         System.out.println(largest5(42.0, 35.1, 2.3, 40.2, 15.6));
     }
 
+    //use public static int to return one or more values
     public static int total5(int a, int b, int c, int d, int e) {
         return a + b + c + d + e;
     }
 
-
+    //use public static int to return one or more values
     public static int average5(int a, int b, int c, int d, int e) {
         int y = a + b + c + d + e;
         return y / 5;
     }
 
+    //use public static int to return one or more values
     public static double largest5(double a, double b, double c, double d, double e) {
 
         if ((a >= b) && (a >= c) && (a >= d) && (a >= e)){

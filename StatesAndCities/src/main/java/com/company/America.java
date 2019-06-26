@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+//
+
 public class America {
     private List<States> stateList;
     private Scanner myScanner;

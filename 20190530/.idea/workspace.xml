@@ -2,9 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0770b8c1-88ec-49ff-9bab-19f3f5e6a0ff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/LuxuryTaxCalculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LuxuryTaxCalculator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RectangularPavingCompany/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RectangularPavingCompany/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/U1M1L2Katas/src/main/java/com/company/AverageThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/U1M1L2Katas/src/main/java/com/company/AverageThree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../InClassCar/InClassCar.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../InClassCar/src/main/java/com/company/CarInventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../U1-M2-Summative-Han-Eric/CalculateObject/CalculateObject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../U1-M2-Summative-Han-Eric/ConverterInterface/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../U1-M2-Summative-Han-Eric/ConverterInterface/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../U1-M2-Summative-Han-Eric/ConverterInterface/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../U1-M2-Summative-Han-Eric/RPGInheritance/RPGInheritance.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190531/U1M1L3Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190531/U1M1L3Katas/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190605/EricHanU1M2L1PBD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190605/EricHanU1M2L1PBD/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190606/CalculatorRefactored/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190606/CalculatorRefactored/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190607/U1M2L5Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190607/U1M2L5Katas/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190607/U1M2L5Katas/target/classes/META-INF/U1M2L5Katas.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190607/UserIO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190607/UserIO/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190610/U1M2L6Katas/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190610/U1M2L6Katas/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190610/U1M2L6Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190610/U1M2L6Katas/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190611/PBD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190611/PBD/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190612/U1M3L2Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190612/U1M3L2Katas/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190612/U1M3L2Katas/src/main/java/com/company/CarLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20190612/U1M3L2Katas/src/main/java/com/company/CarLists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190613/U1M3L3Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190613/U1M3L3Katas/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConverterInterface/ConverterInterface.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PBDS/PBDS.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/src/main/java/com/company/ArrayFun5Words.java" beforeDir="false" afterPath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/src/main/java/com/company/ArrayFun5Words.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/src/main/java/com/company/MonthConverterIf.java" beforeDir="false" afterPath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/src/main/java/com/company/MonthConverterIf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/src/main/java/com/company/MonthConverterSwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/src/main/java/com/company/MonthConverterSwitch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/src/main/java/com/company/SomeMath.java" beforeDir="false" afterPath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/src/main/java/com/company/SomeMath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/src/main/java/com/company/ValidNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/../U1-M1-Summative-Han-Eric/src/main/java/com/company/ValidNumber.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/U1M1L2Katas/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,11 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/U1M1L2Katas/src/main/java/com/company/AverageThree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="80">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -31,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/U1M1L2Katas/src/main/java/com/company/AddFive.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,10 +63,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/U1M1L2Katas/src/main/java/com/company/AddFiveAndDouble.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="80">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/U1M1L2Katas/src/main/java/com/company/AddThirteen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
               <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
@@ -79,7 +112,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -126,10 +159,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
@@ -162,7 +196,7 @@
     <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2936508" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2973138" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -191,17 +225,10 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/U1M1L2Katas/src/main/java/com/company/AverageThree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/U1M1L2Katas/src/main/java/com/company/AddFive.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -210,7 +237,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/U1M1L2Katas/src/main/java/com/company/AddFiveAndDouble.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state relative-caret-position="80">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/U1M1L2Katas/src/main/java/com/company/AddThirteen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/U1M1L2Katas/src/main/java/com/company/AverageThree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>

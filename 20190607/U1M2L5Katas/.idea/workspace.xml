@@ -2,9 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="044866d1-cbaf-49b9-818c-b5eb9495e4ef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../InClassCar/InClassCar.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../InClassCar/src/main/java/com/company/CarInventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1-M2-Summative-Han-Eric/CalculateObject/CalculateObject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1-M2-Summative-Han-Eric/ConverterInterface/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1-M2-Summative-Han-Eric/ConverterInterface/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../U1-M2-Summative-Han-Eric/ConverterInterface/src/main/java/com/company/testMonthSwitch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../20190605/EricHanU1M2L1PBD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190605/EricHanU1M2L1PBD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20190606/U1M2L2Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190606/U1M2L2Katas/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190606/CalculatorRefactored/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190606/CalculatorRefactored/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/U1M2L5Katas.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UserIO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UserIO/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190610/U1M2L6Katas/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190610/U1M2L6Katas/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190610/U1M2L6Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190610/U1M2L6Katas/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190611/PBD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190611/PBD/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190612/U1M3L2Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190612/U1M3L2Katas/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190612/U1M3L2Katas/src/main/java/com/company/CarLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190612/U1M3L2Katas/src/main/java/com/company/CarLists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20190613/U1M3L3Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190613/U1M3L3Katas/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ConverterInterface/ConverterInterface.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PBDS/PBDS.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../U1-M1-Summative-Han-Eric/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M1-Summative-Han-Eric/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../U1-M1-Summative-Han-Eric/src/main/java/com/company/ArrayFun5Words.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M1-Summative-Han-Eric/src/main/java/com/company/ArrayFun5Words.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../U1-M1-Summative-Han-Eric/src/main/java/com/company/MonthConverterIf.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M1-Summative-Han-Eric/src/main/java/com/company/MonthConverterIf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../U1-M1-Summative-Han-Eric/src/main/java/com/company/MonthConverterSwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M1-Summative-Han-Eric/src/main/java/com/company/MonthConverterSwitch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../U1-M1-Summative-Han-Eric/src/main/java/com/company/SomeMath.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M1-Summative-Han-Eric/src/main/java/com/company/SomeMath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../U1-M1-Summative-Han-Eric/src/main/java/com/company/ValidNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M1-Summative-Han-Eric/src/main/java/com/company/ValidNumber.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/interfaces/Alarm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="3" column="15" selection-start-line="3" selection-end-line="4" />
+            <state relative-caret-position="40">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -31,13 +53,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/AnalogClock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
+            <state relative-caret-position="100">
               <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/company/interfaces/Clock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Buzzer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Circle.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
@@ -53,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Square.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            <state relative-caret-position="180">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
               <folding>
                 <element signature="e#128#129#0" expanded="true" />
                 <element signature="e#152#153#0" expanded="true" />
@@ -66,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Triangle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            <state relative-caret-position="220">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
               <folding>
                 <element signature="e#130#131#0" expanded="true" />
                 <element signature="e#154#155#0" expanded="true" />
@@ -81,8 +124,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/company/AllKatasTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="200">
+              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -90,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/DigitalClock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret selection-end-line="23" />
+            <state relative-caret-position="280">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,20 +142,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/company/interfaces/Clock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="4" selection-start-line="4" selection-end-line="5" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/interfaces/Shape.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="40">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -147,22 +181,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/U1M2L5Katas.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-        <option value="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="102" />
+    <option name="y" value="-1057" />
     <option name="width" value="1680" />
     <option name="height" value="1027" />
   </component>
@@ -172,8 +193,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -241,6 +260,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -304,11 +325,18 @@
     <history-entry file="AllKatasTest - 2019.06.06 at 12h 01m 56s.xml">
       <configuration name="AllKatasTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AllKatasTest - 2019.06.09 at 21h 55m 10s.xml">
+      <configuration name="AllKatasTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllKatasTest - 2019.06.15 at 10h 25m 54s.xml">
+      <configuration name="AllKatasTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
+    <frame x="102" y="-1057" width="1680" height="1027" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1953602" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -368,21 +396,32 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/interfaces/Interfaces/Clock.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Triangle.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/com/company/interfaces/Alarm.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Buzzer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/AnalongClock" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Circle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" selection-start-line="4" selection-end-line="16" />
+        <state relative-caret-position="220">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#128#129#0" expanded="true" />
+            <element signature="e#152#153#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/DigitalClock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/AnalongClock" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Square.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state relative-caret-position="180">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
             <element signature="e#128#129#0" expanded="true" />
             <element signature="e#152#153#0" expanded="true" />
@@ -392,8 +431,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Triangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state relative-caret-position="220">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
             <element signature="e#130#131#0" expanded="true" />
             <element signature="e#154#155#0" expanded="true" />
@@ -405,57 +444,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/company/AllKatasTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="200">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/interfaces/Clock.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Buzzer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="4" selection-start-line="4" selection-end-line="5" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/DigitalClock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret selection-end-line="23" />
+        <state relative-caret-position="300">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/interfaces/Alarm.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/AnalogClock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="3" column="15" selection-start-line="3" selection-end-line="4" />
+        <state relative-caret-position="100">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/AnalogClock.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/interfaces/Alarm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="40">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/interfaces/Clock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/interfaces/Shape.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Circle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#128#129#0" expanded="true" />
-            <element signature="e#152#153#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="40">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>

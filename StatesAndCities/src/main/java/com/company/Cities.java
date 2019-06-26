@@ -1,6 +1,6 @@
 package com.company;
 
-public class Cities {
+public class Cities extends States{
     private String cityName;
     private int cityPopulation;
     private boolean isCapital;

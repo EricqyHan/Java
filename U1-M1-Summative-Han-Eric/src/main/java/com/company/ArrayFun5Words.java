@@ -9,6 +9,7 @@ public class ArrayFun5Words {
 
         System.out.println("Enter five words");
 
+
         for (int i = 0; i < array.length; i++){
             System.out.println("Enter word " + (i+1) + ": ");
             array[i] = myScanner.nextLine();

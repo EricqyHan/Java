@@ -9,10 +9,10 @@
       <change beforePath="$PROJECT_DIR$/../../20190610/U1M2L6Katas/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190610/U1M2L6Katas/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../20190610/U1M2L6Katas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190610/U1M2L6Katas/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../20190611/PBD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20190611/PBD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LargestCities/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LargestCities/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LargestCities/src/main/java/com/company/LargestCities.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LargestCities/src/main/java/com/company/LargestCities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/CarLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/CarLists.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../U1-M1-Summative-Han-Eric/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M1-Summative-Han-Eric/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../U1-M1-Summative-Han-Eric/src/main/java/com/company/ValidNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../U1-M1-Summative-Han-Eric/src/main/java/com/company/ValidNumber.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/CarLists.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="708">
-              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+            <state relative-caret-position="772">
+              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
             </state>
           </provider>
         </entry>
@@ -57,7 +57,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/MapFun.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
+            <state relative-caret-position="700">
               <caret line="35" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -98,54 +98,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="U1M3L2Katas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="U1M3L2Katas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="U1M3L2Katas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="U1M3L2Katas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="U1M3L2Katas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="U1M3L2Katas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="U1M3L2Katas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="U1M3L2Katas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="U1M3L2Katas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="U1M3L2Katas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="U1M3L2Katas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="U1M3L2Katas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="company" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -227,10 +182,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15323566" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15689866" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -275,7 +230,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/MapFun.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
+        <state relative-caret-position="700">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -285,8 +240,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/CarLists.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+        <state relative-caret-position="772">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
         </state>
       </provider>
     </entry>

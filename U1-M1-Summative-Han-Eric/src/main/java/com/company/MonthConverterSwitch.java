@@ -10,6 +10,10 @@ public class MonthConverterSwitch {
 
         int userInput = Integer.parseInt(inputMonth);
 
+        // if else are good for variable conditions that result into a boolean,
+        // whereas switch statements are great for fixed data values.
+        //  A switch is really saying "pick one of these based on this variables value"
+        //  but an if statement is just a series of boolean checks.
         if (userInput == 1) {
             System.out.println("January");
         } else if (userInput == 2) {
