@@ -1,0 +1,82 @@
+openapi: 3.0.0
+info:
+  title: SpringBoot and REST Summative
+  description: >-
+    A simple web service that plays three games - Magic Eight Ball, Quote of the
+    Day, and Word of the Day.
+  version: 0.0.1
+servers:
+  - url: 'http://localhost:8080'
+    description: Local Dev Server
+paths:
+  /quote:
+    get:
+      summary: Produce a random quote of the day
+      responses:
+        '200':
+          description: Quote Of The Day
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Quote'
+        '400':
+          description: Invalid request.
+  /word:
+    get:
+      summary: Produce a random word of the day and its definition
+      responses:
+        '200':
+          description: Word Of The Day
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Definition'
+  /magic:
+    post:
+      summary: Creates a new question
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Magic'
+      responses:
+        '201':
+          description: A Question object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Magic'
+        '400':
+          description: Invalid request.
+        '422':
+          description: Incomplete Magic information. Some required fields are missing.
+components:
+  schemas:
+    Quote:
+      properties:
+        Author:
+          type: string
+        Quote:
+          type: string
+      required:
+        - Author
+        - Quote
+    Definition:
+      properties:
+        Word:
+          type: string
+        Definition:
+          type: string
+      required:
+        - Word
+        - Definition
+    Magic:
+      properties:
+        Question:
+          type: string
+        Answer:
+          type: string
+      required:
+        - Question
+        - Answer
