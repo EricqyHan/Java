@@ -3,11 +3,13 @@ package com.example.U1M4SummativeHanEric.model;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Min;
 
-public class Word {
+public class Definition {
     private String word;
     private String definition;
 
-    public Word() {
+    public Definition(String word, String definition) {
+        this.word = word;
+        this.definition = definition;
     }
 
     public String getWord() {

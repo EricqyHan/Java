@@ -26,7 +26,7 @@ paths:
       summary: Produce a random word of the day and its definition
       responses:
         '200':
-          description: Word Of The Day
+          description: Definition Of The Day
           content:
             application/json:
               schema:
@@ -69,7 +69,7 @@ components:
         Definition:
           type: string
       required:
-        - Word
+        - Definition
         - Definition
     Magic:
       properties:
