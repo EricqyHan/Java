@@ -11,12 +11,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+//CLA - Class-Level Annotation
+//MLA - Method-Level Annotation
 
-@RestController
+@RestController //Class-level annotation. Marks class as Rest Controller & makes Spring aware of existence
+// Configures Spring so it treats all returned values from methods as JSON and sends those values back to the client
 public class Controller {
 
-    @RequestMapping(value = "/quote", method = RequestMethod.GET)
-    @ResponseStatus(HttpStatus.OK)
+    @RequestMapping(value = "/quote", method = RequestMethod.GET) // MLA - Maps endpoint to method that hands request tp endpoint. It is unique.
+    // the value contains URI path, Method contains HTTP method
+    @ResponseStatus(HttpStatus.OK) // MLA - status code that is sent back when method successfully handles incoming request.
 
     public Quote randomQuote() {
         Quote quote1 = new Quote();
@@ -29,6 +33,7 @@ public class Controller {
         Quote quote8 = new Quote();
         Quote quote9 = new Quote();
         Quote quote10 = new Quote();
+
 
         quote1.setQuote("If you don't program in life, life will program you.");
         quote1.setAuthor("Les Brown");
@@ -64,7 +69,6 @@ public class Controller {
         qList.add(quote10);
         Random random = new Random();
         Quote quote = qList.get(random.nextInt(10));
-
 
         return quote;
     }
@@ -127,27 +131,33 @@ public class Controller {
     }
 
 
-
-
-
     @RequestMapping(value = "/magic", method = RequestMethod.POST)
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.OK) // MLA - HTTP status code that is sent back when method successfuly handles incoming request
 
-    public Answer answers(@RequestBody Answer question) {
+    public Answer answers(@RequestBody Answer question) { //RequestBody - Method Parameter annotation. Maps JSON in request body to a method parameter.
         Answer answer1 = new Answer();
         Answer answer2 = new Answer();
         Answer answer3 = new Answer();
         Answer answer4 = new Answer();
         Answer answer5 = new Answer();
         Answer answer6 = new Answer();
+        Answer answer7 = new Answer();
+        Answer answer8 = new Answer();
+        Answer answer9 = new Answer();
+        Answer answer10 = new Answer();
 
         List<Answer> answersEightBall = new ArrayList<>();
         answer1.setAnswer("It is certain");
         answer2.setAnswer("Yes - Definitely");
-        answer3.setAnswer("Ask again later");
-        answer4.setAnswer("Cannot predict now");
-        answer5.setAnswer("Outlook not so good");
-        answer6.setAnswer("Don't count on it");
+        answer3.setAnswer("You may rely on it");
+        answer4.setAnswer("Ask again later");
+        answer5.setAnswer("Cannot predict now");
+        answer6.setAnswer("Concentrate and ask later");
+        answer7.setAnswer("Outlook not so good");
+        answer8.setAnswer("My sources say no");
+        answer9.setAnswer("Very doubtful");
+        answer10.setAnswer("There's always Wal-mart");
+
         Random randomEightBall = new Random();
         answersEightBall.add(answer1);
         answersEightBall.add(answer2);
@@ -155,7 +165,7 @@ public class Controller {
         answersEightBall.add(answer4);
         answersEightBall.add(answer5);
         answersEightBall.add(answer6);
-        Answer answer = answersEightBall.get(randomEightBall.nextInt(5));
+        Answer answer = answersEightBall.get(randomEightBall.nextInt(10));
 
         answer.setQuestion(question.getQuestion());
         return answer;
