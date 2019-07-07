@@ -18,11 +18,11 @@ import static org.junit.Assert.*;
 @SpringBootTest
 public class AuthorDaoJdbcTemplateImplTest {
     @Autowired
-    protected AuthorDao AuthorDao;
+    AuthorDao AuthorDao;
     @Autowired
-    protected BookDao BookDao;
+    BookDao BookDao;
     @Autowired
-    protected PublisherDao PublisherDao;
+    PublisherDao PublisherDao;
 
     @Before
     public void setUp() throws Exception {

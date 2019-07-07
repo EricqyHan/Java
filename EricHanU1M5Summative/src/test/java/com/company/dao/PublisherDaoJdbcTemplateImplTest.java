@@ -19,11 +19,11 @@ import static org.junit.Assert.*;
 @SpringBootTest
 public class PublisherDaoJdbcTemplateImplTest {
     @Autowired
-    protected AuthorDao AuthorDao;
+    AuthorDao AuthorDao;
     @Autowired
-    protected BookDao BookDao;
+    BookDao BookDao;
     @Autowired
-    protected PublisherDao PublisherDao;
+    PublisherDao PublisherDao;
 
 
     @Before
@@ -45,10 +45,10 @@ public class PublisherDaoJdbcTemplateImplTest {
 
     }
 
-     @After
-     public void tearDown() throws Exception{
-
-     }
+//     @After
+//     public void tearDown() throws Exception{
+//
+//     }
 
     @Test
     public void addGetDeletePublisher(){

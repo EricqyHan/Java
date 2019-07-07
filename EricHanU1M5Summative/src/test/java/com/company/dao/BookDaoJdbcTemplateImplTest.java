@@ -21,11 +21,11 @@ import static org.junit.Assert.*;
 public class BookDaoJdbcTemplateImplTest {
 
     @Autowired
-    protected AuthorDao AuthorDao;
+    AuthorDao AuthorDao;
     @Autowired
-    protected BookDao BookDao;
+    BookDao BookDao;
     @Autowired
-    protected PublisherDao PublisherDao;
+    PublisherDao PublisherDao;
 
     @Before
     public void setUp() throws Exception {
@@ -46,10 +46,10 @@ public class BookDaoJdbcTemplateImplTest {
 
     }
 
-    @After
-    public void tearDown() throws Exception{
-
-    }
+//    @After
+//    public void tearDown() throws Exception{
+//
+//    }
 
     @Test
     public void addGetDeleteBook() {
