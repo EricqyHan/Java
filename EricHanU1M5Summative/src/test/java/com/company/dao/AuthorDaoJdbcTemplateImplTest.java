@@ -26,10 +26,6 @@ public class AuthorDaoJdbcTemplateImplTest {
 
     @Before
     public void setUp() throws Exception {
-        List<Author> aList = AuthorDao.getAllAuthors();
-        for (Author a : aList) {
-            AuthorDao.deleteAuthor(a.getAuthor_id());
-        }
 
         List<Book> bList = BookDao.getAllBooks();
         for (Book b : bList) {
@@ -41,7 +37,12 @@ public class AuthorDaoJdbcTemplateImplTest {
             PublisherDao.deletePublisher(p.getPublisherId());
         }
 
+        List<Author> aList = AuthorDao.getAllAuthors();
+        for (Author a : aList) {
+            AuthorDao.deleteAuthor(a.getAuthor_id());
+        }
     }
+
 
     @Test
     public void addGetDeletePublisher() {
@@ -49,8 +50,8 @@ public class AuthorDaoJdbcTemplateImplTest {
         author.setFirstName("Stephen");
         author.setLastName("Strange");
         author.setStreet("Bleecker Street");
-        author.setCity("New York");
-        author.setState("New York");
+        author.setCity("NY");
+        author.setState("NJ");
         author.setPostalCode("12344");
         author.setPhone("555-919-9111");
         author.setEmail("DoctorStrange@SanctumSanctorum.com");
@@ -75,8 +76,8 @@ public class AuthorDaoJdbcTemplateImplTest {
         author.setFirstName("Stephen");
         author.setLastName("Strange");
         author.setStreet("Bleecker Street");
-        author.setCity("New York");
-        author.setState("New York");
+        author.setCity("NY");
+        author.setState("NM");
         author.setPostalCode("12344");
         author.setPhone("555-919-9111");
         author.setEmail("DoctorStrange@SanctumSanctorum.com");
@@ -88,7 +89,7 @@ public class AuthorDaoJdbcTemplateImplTest {
         author.setLastName("Sitwell");
         author.setStreet("Mjolnir Street");
         author.setCity("Shield City");
-        author.setState("New Jersey");
+        author.setState("NJ");
         author.setPostalCode("22222");
         author.setPhone("481-516-2342");
         author.setEmail("JSitwell@SHIELD.com");
@@ -107,11 +108,12 @@ public class AuthorDaoJdbcTemplateImplTest {
         author.setFirstName("Stephen");
         author.setLastName("Strange");
         author.setStreet("Bleecker Street");
-        author.setCity("New York");
-        author.setState("New York");
+        author.setCity("NY");
+        author.setState("NY");
         author.setPostalCode("12344");
         author.setPhone("555-919-9111");
         author.setEmail("DoctorStrange@SanctumSanctorum.com");
+
 
         author = AuthorDao.addAuthor(author);
 
@@ -119,7 +121,7 @@ public class AuthorDaoJdbcTemplateImplTest {
         author.setLastName("Mordo");
         author.setStreet("Walt Disney Street");
         author.setCity("Orlando");
-        author.setState("Nevada");
+        author.setState("NM");
 
         AuthorDao.updateAuthor(author);
 

@@ -21,7 +21,7 @@ public class PublisherDaoJdbcTemplateImpl implements PublisherDao {
             "insert into publisher (publisher_id, name, street, city, state, postal_code, phone, email) values (?, ?, ?, ?, ?, ?, ?, ?)";
 
     private static final String SELECT_PUBLISHER_SQL =
-            "select * from publisher where puslisher_id = ?";
+            "select * from publisher where publisher_id = ?";
 
     private static final String SELECT_ALL_PUBLISHER_SQL =
             "select * from publisher";

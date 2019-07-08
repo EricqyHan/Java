@@ -29,36 +29,30 @@ public class PublisherDaoJdbcTemplateImplTest {
     @Before
     public void setUp() throws Exception {
         List<Book> bList = BookDao.getAllBooks();
-
-        bList.stream()
-                .forEach(book -> BookDao.deleteBook(book.getBookId()));
+        for (Book b : bList) {
+            BookDao.deleteBook(b.getBookId());
+        }
 
         List<Publisher> pList = PublisherDao.getAllPublishers();
-
-        pList.stream()
-                .forEach(publisher -> PublisherDao.deletePublisher(publisher.getPublisherId()));
+        for (Publisher p : pList) {
+            PublisherDao.deletePublisher(p.getPublisherId());
+        }
 
         List<Author> aList = AuthorDao.getAllAuthors();
-
-        aList.stream()
-                .forEach(author -> AuthorDao.deleteAuthor(author.getAuthor_id()));
-
+        for (Author a : aList) {
+            AuthorDao.deleteAuthor(a.getAuthor_id());
+        }
     }
 
-//     @After
-//     public void tearDown() throws Exception{
-//
-//     }
 
     @Test
     public void addGetDeletePublisher(){
 
         Publisher publisher = new Publisher();
-        publisher.setPublisherId(2222222);
         publisher.setName("The Empire");
         publisher.setStreet("Skywalker Street");
         publisher.setCity("Coruscant");
-        publisher.setState("Texas");
+        publisher.setState("TX");
         publisher.setPostalCode("07936");
         publisher.setPhone("555-666-8888");
         publisher.setEmail("Palpatine@gloriousleader.com");
@@ -67,7 +61,7 @@ public class PublisherDaoJdbcTemplateImplTest {
 
         Publisher publisher2 = PublisherDao.getPublisher(publisher.getPublisherId());
 
-        assertEquals(publisher, publisher2);
+        assertEquals(publisher2, publisher);
 
         PublisherDao.deletePublisher(publisher.getPublisherId());
 
@@ -80,11 +74,10 @@ public class PublisherDaoJdbcTemplateImplTest {
     @Test
     public void getAllPublishers() {
         Publisher publisher = new Publisher();
-        publisher.setPublisherId(2222222);
         publisher.setName("The Empire");
         publisher.setStreet("Skywalker Street");
         publisher.setCity("Coruscant");
-        publisher.setState("Texas");
+        publisher.setState("TX");
         publisher.setPostalCode("07936");
         publisher.setPhone("555-666-8888");
         publisher.setEmail("Palpatine@gloriousleader.com");
@@ -92,11 +85,10 @@ public class PublisherDaoJdbcTemplateImplTest {
         PublisherDao.addPublisher(publisher);
 
         publisher = new Publisher();
-        publisher.setPublisherId(2222222);
         publisher.setName("The Rebellion");
         publisher.setStreet("Han Solo Drive");
         publisher.setCity("Yalvin");
-        publisher.setState("New Jersey");
+        publisher.setState("NJ");
         publisher.setPostalCode("90210");
         publisher.setPhone("111-222-4321");
         publisher.setEmail("DarthVader@gloriousleader.com");
@@ -118,7 +110,7 @@ public class PublisherDaoJdbcTemplateImplTest {
         publisher.setName("The Empire");
         publisher.setStreet("Skywalker Street");
         publisher.setCity("Coruscant");
-        publisher.setState("Texas");
+        publisher.setState("TX");
         publisher.setPostalCode("07936");
         publisher.setPhone("555-666-8888");
         publisher.setEmail("Palpatine@gloriousleader.com");
@@ -129,7 +121,7 @@ public class PublisherDaoJdbcTemplateImplTest {
         publisher.setName("Darth Vader");
         publisher.setStreet("Hoth");
         publisher.setCity("C3PO City");
-        publisher.setState("Alaska");
+        publisher.setState("AK");
 
         PublisherDao.updatePublisher(publisher);
 

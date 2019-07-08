@@ -15,16 +15,16 @@ import java.util.List;
 public class AuthorDaoJdbcTemplateImpl implements AuthorDao{
 
     private static final String INSERT_AUTHOR_SQL =
-            "insert into author (author_id, first_name, last_name, street, city, state, postalCode, phone, email) values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            "insert into author (first_name, last_name, street, city, state, postal_code, phone, email) values (?, ?, ?, ?, ?, ?, ?, ?)";
 
     private static final String SELECT_AUTHOR_SQL =
-            "select * from  where author_id = ?";
+            "select * from author where author_id = ?";
 
     private static final String SELECT_ALL_AUTHORS_SQL =
             "select * from author";
 
     private static final String UPDATE_AUTHOR_SQL =
-            "update author set name = ?, street = ?, city = ?, state = ?, postalCode = ?, phone = ?, email = ?";
+            "update author set first_name = ?, last_name = ?, street = ?, city = ?, state = ?, postal_code = ?, phone = ?, email = ? where author_id = ?";
 
     private static final String DELETE_ALBUM =
             "delete from author where author_ID = ?";
@@ -59,7 +59,6 @@ public class AuthorDaoJdbcTemplateImpl implements AuthorDao{
 
         jdbcTemplate.update(
                 INSERT_AUTHOR_SQL,
-                author.getAuthor_id(),
                 author.getFirstName(),
                 author.getLastName(),
                 author.getStreet(),
@@ -78,16 +77,16 @@ public class AuthorDaoJdbcTemplateImpl implements AuthorDao{
 
     @Override
     public void updateAuthor(Author author){
-        jdbcTemplate.update(UPDATE_AUTHOR_SQL, author.getAuthor_id(),
+        jdbcTemplate.update(UPDATE_AUTHOR_SQL,
                 author.getFirstName(),
                 author.getLastName(),
                 author.getStreet(),
                 author.getCity(),
-                author.getCity(),
                 author.getState(),
                 author.getPostalCode(),
                 author.getPhone(),
-                author.getEmail());
+                author.getEmail(),
+                author.getAuthor_id());
     }
 
     @Override

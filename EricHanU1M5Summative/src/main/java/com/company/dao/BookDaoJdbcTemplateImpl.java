@@ -4,16 +4,18 @@ import com.company.model.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+@Repository
 public class BookDaoJdbcTemplateImpl implements BookDao {
 
     // prepared statements string
     private static final String INSERT_BOOK_SQL =
-            "insert into book (book_id,isbn, publish_date, author_id, title, publisher_id, price) values (?, ?, ?, ?, ?, ?, ?, ?)";
+            "insert into book (book_id, isbn, publish_date, author_id, title, publisher_id, price) values (?, ?, ?, ?, ?, ?, ?)";
 
     private static final String SELECT_BOOK_SQL =
             "select * from book where book_id = ?";
@@ -27,7 +29,7 @@ public class BookDaoJdbcTemplateImpl implements BookDao {
     private static final String UPDATE_BOOK_SQL =
             "update book set book_id = ?, isbn = ?, publish_date = ?, author_id = ?, title = ?, publisher_id = ?, price = ?";
 
-    private static final String SELECT_Book_BY_AUTHOR_SQL =
+    private static final String SELECT_BOOK_BY_AUTHOR_SQL =
             "select * from book where author_id = ?";
 
     private JdbcTemplate jdbcTemplate;
@@ -87,7 +89,7 @@ public class BookDaoJdbcTemplateImpl implements BookDao {
 
     @Override
     public List<Book> getBooksByAuthor(int author_id) {
-        return jdbcTemplate.query(SELECT_Book_BY_AUTHOR_SQL, this::mapRowToBook, author_id);
+        return jdbcTemplate.query(SELECT_BOOK_BY_AUTHOR_SQL, this::mapRowToBook, author_id);
     }
 
 

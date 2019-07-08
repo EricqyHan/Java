@@ -91,14 +91,14 @@ public class Author {
         if (o == null || getClass() != o.getClass()) return false;
         Author author = (Author) o;
         return getAuthor_id() == author.getAuthor_id() &&
-                getFirstName() == author.getFirstName() &&
-                getLastName() == author.getLastName() &&
-                getStreet() == author.getStreet() &&
-                getCity() == author.getCity() &&
-                getState() == author.getState() &&
-                getPostalCode() == author.getPostalCode() &&
-                getPhone() == author.getPhone() &&
-                getEmail() == author.getEmail();
+                Objects.equals(getFirstName(), author.getFirstName()) &&
+                Objects.equals(getLastName(), author.getLastName()) &&
+                Objects.equals(getStreet(), author.getStreet()) &&
+                Objects.equals(getCity(), author.getCity()) &&
+                Objects.equals(getState(), author.getState()) &&
+                Objects.equals(getPostalCode(), author.getPostalCode()) &&
+                Objects.equals(getPhone(), author.getPhone()) &&
+                Objects.equals(getEmail(), author.getEmail());
 
     }
 

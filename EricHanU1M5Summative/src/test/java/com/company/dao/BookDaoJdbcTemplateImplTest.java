@@ -30,26 +30,20 @@ public class BookDaoJdbcTemplateImplTest {
     @Before
     public void setUp() throws Exception {
         List<Book> bList = BookDao.getAllBooks();
-
-        bList.stream()
-                .forEach(book -> BookDao.deleteBook(book.getBookId()));
+        for (Book b : bList) {
+            BookDao.deleteBook(b.getBookId());
+        }
 
         List<Publisher> pList = PublisherDao.getAllPublishers();
-
-        pList.stream()
-                .forEach(publisher -> PublisherDao.deletePublisher(publisher.getPublisherId()));
+        for (Publisher p : pList) {
+            PublisherDao.deletePublisher(p.getPublisherId());
+        }
 
         List<Author> aList = AuthorDao.getAllAuthors();
-
-        aList.stream()
-                .forEach(author -> AuthorDao.deleteAuthor(author.getAuthor_id()));
-
+        for (Author a : aList) {
+            AuthorDao.deleteAuthor(a.getAuthor_id());
+        }
     }
-
-//    @After
-//    public void tearDown() throws Exception{
-//
-//    }
 
     @Test
     public void addGetDeleteBook() {
@@ -59,7 +53,7 @@ public class BookDaoJdbcTemplateImplTest {
         publisher.setName("The Empire");
         publisher.setStreet("Skywalker Street");
         publisher.setCity("Coruscant");
-        publisher.setState("Texas");
+        publisher.setState("TX");
         publisher.setPostalCode("07936");
         publisher.setPhone("555-666-8888");
         publisher.setEmail("Palpatine@gloriousleader.com");
@@ -69,10 +63,10 @@ public class BookDaoJdbcTemplateImplTest {
         Author author = new Author();
         author.setAuthor_id(5987423);
         author.setFirstName("Stephen");
-        author.setFirstName("King");
+        author.setLastName("King");
         author.setStreet("Evergreen Terrace");
         author.setCity("Springfield");
-        author.setState("New Jersey");
+        author.setState("NJ");
         author.setPostalCode("90210");
         author.setPhone("555-555-5555");
         author.setEmail("TK421@EmpireStrikesBack.com");
@@ -111,7 +105,7 @@ public class BookDaoJdbcTemplateImplTest {
         publisher.setName("The Empire");
         publisher.setStreet("Skywalker Street");
         publisher.setCity("Coruscant");
-        publisher.setState("Texas");
+        publisher.setState("TX");
         publisher.setPostalCode("07936");
         publisher.setPhone("555-666-8888");
         publisher.setEmail("Palpatine@gloriousleader.com");
@@ -121,10 +115,10 @@ public class BookDaoJdbcTemplateImplTest {
         Author author = new Author();
         author.setAuthor_id(5987423);
         author.setFirstName("Stephen");
-        author.setFirstName("King");
+        author.setLastName("King");
         author.setStreet("Evergreen Terrace");
         author.setCity("Springfield");
-        author.setState("New Jersey");
+        author.setState("NJ");
         author.setPostalCode("90210");
         author.setPhone("555-555-5555");
         author.setEmail("TK421@EmpireStrikesBack.com");
@@ -132,7 +126,7 @@ public class BookDaoJdbcTemplateImplTest {
         author = AuthorDao.addAuthor(author);
 
         Book book = new Book();
-        book.setIsbn(978-1-4391-4850-1);
+        book.setIsbn(978143);
         book.setPublish_date(LocalDate.of(2009, 11, 10));
         book.setAuthorId(author.getAuthor_id());
         book.setTitle("Under The Dome");
@@ -163,7 +157,7 @@ public class BookDaoJdbcTemplateImplTest {
         publisher.setName("The Empire");
         publisher.setStreet("Skywalker Street");
         publisher.setCity("Coruscant");
-        publisher.setState("Texas");
+        publisher.setState("TX");
         publisher.setPostalCode("07936");
         publisher.setPhone("555-666-8888");
         publisher.setEmail("Palpatine@gloriousleader.com");
@@ -173,10 +167,10 @@ public class BookDaoJdbcTemplateImplTest {
         Author author = new Author();
         author.setAuthor_id(5987423);
         author.setFirstName("Stephen");
-        author.setFirstName("King");
+        author.setLastName("King");
         author.setStreet("Evergreen Terrace");
         author.setCity("Springfield");
-        author.setState("New Jersey");
+        author.setState("NJ");
         author.setPostalCode("90210");
         author.setPhone("555-555-5555");
         author.setEmail("TK421@EmpireStrikesBack.com");
@@ -216,7 +210,7 @@ public class BookDaoJdbcTemplateImplTest {
         author.setLastName("Han");
         author.setStreet("Evergreen Terrace");
         author.setCity("Springfield");
-        author.setState("New York");
+        author.setState("NY");
         author.setPostalCode("90210");
         author.setPhone("555-555-2234");
         author.setEmail("realEmail@gmail.com");
@@ -228,7 +222,7 @@ public class BookDaoJdbcTemplateImplTest {
         author.setLastName("Solo");
         author.setStreet("Star Wars Road");
         author.setCity("Corellian");
-        author.setState("New York");
+        author.setState("NY");
         author.setPostalCode("11111");
         author.setPhone("421-421-1977");
         author.setEmail("HanSolo@MillenniumFalcon.com");
@@ -240,7 +234,7 @@ public class BookDaoJdbcTemplateImplTest {
         author.setLastName("Calrissian");
         author.setStreet("George Lucas Court");
         author.setCity("Cloud City");
-        author.setState("Bespin");
+        author.setState("KY");
         author.setPostalCode("54321");
         author.setPhone("555-678-1300");
         author.setEmail("HanSolo@MillenniumFalcon.com");
