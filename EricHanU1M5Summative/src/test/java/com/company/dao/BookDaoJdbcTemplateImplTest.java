@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -49,7 +50,6 @@ public class BookDaoJdbcTemplateImplTest {
     public void addGetDeleteBook() {
 
         Publisher publisher = new Publisher();
-        publisher.setPublisherId(2222222);
         publisher.setName("The Empire");
         publisher.setStreet("Skywalker Street");
         publisher.setCity("Coruscant");
@@ -61,7 +61,6 @@ public class BookDaoJdbcTemplateImplTest {
         publisher = PublisherDao.addPublisher(publisher);
 
         Author author = new Author();
-        author.setAuthor_id(5987423);
         author.setFirstName("Stephen");
         author.setLastName("King");
         author.setStreet("Evergreen Terrace");
@@ -74,18 +73,18 @@ public class BookDaoJdbcTemplateImplTest {
         author = AuthorDao.addAuthor(author);
 
         Book book = new Book();
-        book.setIsbn(978-1-4391-4850-1);
+        book.setIsbn("97439148501");
         book.setPublish_date(LocalDate.of(2009, 11, 10));
         book.setAuthorId(author.getAuthor_id());
         book.setTitle("Under The Dome");
         book.setPublisherId(publisher.getPublisherId());
-        book.setPrice(12.99);
+        book.setPrice(new BigDecimal("12.99"));
 
         book = BookDao.addBook(book);
 
         Book book2 = BookDao.getBook(book.getBookId());
 
-        assertEquals(book, book2);
+        assertEquals(book2, book);
 
         BookDao.deleteBook(book.getBookId());
 
@@ -101,7 +100,6 @@ public class BookDaoJdbcTemplateImplTest {
         //Book book = new Book();
 
         Publisher publisher = new Publisher();
-        publisher.setPublisherId(2222222);
         publisher.setName("The Empire");
         publisher.setStreet("Skywalker Street");
         publisher.setCity("Coruscant");
@@ -113,7 +111,6 @@ public class BookDaoJdbcTemplateImplTest {
         publisher = PublisherDao.addPublisher(publisher);
 
         Author author = new Author();
-        author.setAuthor_id(5987423);
         author.setFirstName("Stephen");
         author.setLastName("King");
         author.setStreet("Evergreen Terrace");
@@ -126,26 +123,26 @@ public class BookDaoJdbcTemplateImplTest {
         author = AuthorDao.addAuthor(author);
 
         Book book = new Book();
-        book.setIsbn(978143);
+        book.setIsbn("978143");
         book.setPublish_date(LocalDate.of(2009, 11, 10));
         book.setAuthorId(author.getAuthor_id());
         book.setTitle("Under The Dome");
         book.setPublisherId(publisher.getPublisherId());
-        book.setPrice(12.99);
+        book.setPrice(new BigDecimal("12.99"));
 
         book = BookDao.addBook(book);
 
-        book.setIsbn(2222222);
+        book = new Book();
+        book.setIsbn("2222222");
         book.setPublish_date(LocalDate.of(1990, 9, 11));
         book.setAuthorId(author.getAuthor_id());
         book.setTitle("Eric's Life");
         book.setPublisherId(publisher.getPublisherId());
-        book.setPrice(3.50);
-
-        BookDao.updateBook(book);
+        book.setPrice(new BigDecimal("3.50"));
+        book = BookDao.addBook(book);
 
         List<Book> bList = BookDao.getAllBooks();
-        assertEquals(bList.size(), 3);
+        assertEquals(bList.size(), 2);
 
     }
 
@@ -153,7 +150,6 @@ public class BookDaoJdbcTemplateImplTest {
     @Test
     public void updateBook() {
         Publisher publisher = new Publisher();
-        publisher.setPublisherId(2222222);
         publisher.setName("The Empire");
         publisher.setStreet("Skywalker Street");
         publisher.setCity("Coruscant");
@@ -165,7 +161,6 @@ public class BookDaoJdbcTemplateImplTest {
         publisher = PublisherDao.addPublisher(publisher);
 
         Author author = new Author();
-        author.setAuthor_id(5987423);
         author.setFirstName("Stephen");
         author.setLastName("King");
         author.setStreet("Evergreen Terrace");
@@ -178,21 +173,20 @@ public class BookDaoJdbcTemplateImplTest {
         author = AuthorDao.addAuthor(author);
 
         Book book = new Book();
-        book.setIsbn(978-1-4391-4850-1);
+        book.setIsbn("974314850");
         book.setPublish_date(LocalDate.of(2009, 11, 10));
         book.setAuthorId(author.getAuthor_id());
         book.setTitle("Under The Dome");
         book.setPublisherId(publisher.getPublisherId());
-        book.setPrice(12.99);
+        book.setPrice(new BigDecimal("10.99"));
 
         book = BookDao.addBook(book);
 
-        book.setIsbn(2222222);
+        book.setIsbn("2222222");
         book.setPublish_date(LocalDate.of(1990, 9, 11));
-        book.setAuthorId(author.getAuthor_id());
         book.setTitle("Eric's Life");
         book.setPublisherId(publisher.getPublisherId());
-        book.setPrice(3.50);
+        book.setPrice(new BigDecimal("3.50"));
 
         BookDao.updateBook(book);
 
@@ -241,44 +235,55 @@ public class BookDaoJdbcTemplateImplTest {
 
         author3 = AuthorDao.addAuthor(author3);
 
+        Publisher publisher = new Publisher();
+        publisher.setName("Fin");
+        publisher.setStreet("Court Street");
+        publisher.setCity("Solo City");
+        publisher.setState("NJ");
+        publisher.setPostalCode("07936");
+        publisher.setPhone("555-999-4231");
+        publisher.setEmail("MM@gmail.com");
+
+        publisher = PublisherDao.addPublisher(publisher);
+
         Book book = new Book();
-        book.setIsbn(111111);
+        book.setIsbn("111111");
         book.setPublish_date(LocalDate.of(1990, 1, 1));
-        book.setAuthorId(123455);
+        book.setAuthorId(author.getAuthor_id());
         book.setTitle("A New Hope");
-        book.setPublisherId(1234566);
-        book.setPrice(3.50);
+        book.setPublisherId(publisher.getPublisherId());
+        book.setPrice(new BigDecimal("3.50"));
 
         BookDao.addBook(book);
 
         book = new Book();
-        book.setIsbn(222222);
+        book.setIsbn("222222");
         book.setPublish_date(LocalDate.of(1980, 5, 21));
-        book.setAuthorId(481516);
+        book.setAuthorId(author.getAuthor_id());
         book.setTitle("Empire Strikes Back");
-        book.setPublisherId(1234566);
-        book.setPrice(18.50);
+        book.setPublisherId(publisher.getPublisherId());
+        book.setPrice(new BigDecimal("18.50"));
 
         BookDao.addBook(book);
 
-        book = new Book();
-        book.setIsbn(333333);
-        book.setPublish_date(LocalDate.of(1983, 5, 25));
-        book.setAuthorId(481516);
-        book.setTitle("Return of the Jedi");
-        book.setPublisherId(285894);
-        book.setPrice(9.50);
+        Book book1 = new Book();
+        book1.setIsbn("333333");
+        book1.setPublish_date(LocalDate.of(1983, 5, 25));
+        book1.setAuthorId(author2.getAuthor_id());
+        book1.setTitle("Return of the Jedi");
+        book1.setPublisherId(publisher.getPublisherId());
+        book1.setPrice(new BigDecimal("9.50"));
 
         BookDao.addBook(book);
 
         List<Book> bList = BookDao.getBooksByAuthor(author.getAuthor_id());
-        assertEquals(2, bList.size());
+        assertEquals(bList.size(), 2);
 
         List<Book> bList2 = BookDao.getBooksByAuthor(author2.getAuthor_id());
-        assertEquals(1, bList2.size());
+        assertEquals(bList2.size(), 1);
 
         List<Book> bList3 = BookDao.getBooksByAuthor(author3.getAuthor_id());
-        assertEquals(0, bList3.size());
+        assertEquals(bList3.size(), 0);
 
     }
 }

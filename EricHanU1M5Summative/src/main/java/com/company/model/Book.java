@@ -1,17 +1,18 @@
 package com.company.model;
 
+import java.math.BigDecimal;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Objects;
 
 public class Book {
     private int bookId;
-    private int isbn;
+    private String isbn;
     private LocalDate publish_date;
     private int authorId;
     private String title;
     private int publisherId;
-    private double price;
+    private BigDecimal price;
 
     public int getBookId() {
         return bookId;
@@ -21,11 +22,11 @@ public class Book {
         this.bookId = bookId;
     }
 
-    public int getIsbn() {
+    public String getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(int isbn) {
+    public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
 
@@ -61,11 +62,11 @@ public class Book {
         this.publisherId = publisherId;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
@@ -74,21 +75,18 @@ public class Book {
         if (this == o || getClass() != o.getClass()) return false;
         Book that = (Book) o;
         return getBookId() == that.getBookId() &&
+                getAuthorId() == that.getAuthorId() &&
+                getPublisherId() == that.getPublisherId() &&
                 Objects.equals(getIsbn(), that.getIsbn()) &&
                 Objects.equals(getPublish_date(), that.getPublish_date()) &&
-                Objects.equals(getAuthorId(), that.getAuthorId()) &&
                 Objects.equals(getTitle(), that.getTitle()) &&
-                Objects.equals(getPublisherId(), that.getPublisherId()) &&
-                Objects.equals(getPublisherId(), that.getPrice());
+                Objects.equals(getPrice(), that.getPrice());
 }
 
     @Override
     public int hashCode() {
         return Objects.hash(getBookId(), getIsbn(), getPublish_date(), getAuthorId(), getTitle(), getPublisherId(), getPrice());
 
-    }
-
-    public void setPublish_date(Date publish_date) {
     }
 }
 

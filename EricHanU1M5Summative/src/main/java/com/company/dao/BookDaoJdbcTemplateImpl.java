@@ -15,7 +15,7 @@ public class BookDaoJdbcTemplateImpl implements BookDao {
 
     // prepared statements string
     private static final String INSERT_BOOK_SQL =
-            "insert into book (book_id, isbn, publish_date, author_id, title, publisher_id, price) values (?, ?, ?, ?, ?, ?, ?)";
+            "insert into book  (isbn, publish_date, author_id, title, publisher_id, price) values (?, ?, ?, ?, ?, ?)";
 
     private static final String SELECT_BOOK_SQL =
             "select * from book where book_id = ?";
@@ -27,7 +27,7 @@ public class BookDaoJdbcTemplateImpl implements BookDao {
             "delete from book where book_id = ?";
 
     private static final String UPDATE_BOOK_SQL =
-            "update book set book_id = ?, isbn = ?, publish_date = ?, author_id = ?, title = ?, publisher_id = ?, price = ?";
+            "update book set isbn = ?, publish_date = ?, author_id = ?, title = ?, publisher_id = ?, price = ? where book_id = ?";
 
     private static final String SELECT_BOOK_BY_AUTHOR_SQL =
             "select * from book where author_id = ?";
@@ -57,7 +57,6 @@ public class BookDaoJdbcTemplateImpl implements BookDao {
     @Override
     public Book addBook(Book book) {
         jdbcTemplate.update(INSERT_BOOK_SQL,
-                book.getBookId(),
                 book.getIsbn(),
                 book.getPublish_date(),
                 book.getAuthorId(),
@@ -73,13 +72,13 @@ public class BookDaoJdbcTemplateImpl implements BookDao {
     @Override
     public void updateBook(Book book) {
         jdbcTemplate.update(UPDATE_BOOK_SQL,
-                book.getBookId(),
                 book.getIsbn(),
                 book.getPublish_date(),
                 book.getAuthorId(),
                 book.getTitle(),
                 book.getPublisherId(),
-                book.getPrice());
+                book.getPrice(),
+                book.getBookId());
     }
 
     @Override
@@ -97,12 +96,12 @@ public class BookDaoJdbcTemplateImpl implements BookDao {
     private Book mapRowToBook(ResultSet rs, int rowNum) throws SQLException {
         Book book = new Book();
         book.setBookId(rs.getInt("book_id"));
-        book.setIsbn(rs.getInt("isbn"));
-        book.setPublish_date(rs.getDate("publish_date"));
+        book.setIsbn(rs.getString("isbn"));
+        book.setPublish_date(rs.getDate("publish_date").toLocalDate());
         book.setAuthorId(rs.getInt("author_id"));
         book.setTitle(rs.getString("title"));
         book.setPublisherId(rs.getInt("publisher_id"));
-        book.setPrice(rs.getInt("price"));
+        book.setPrice(rs.getBigDecimal("price"));
 
         return book;
     }
