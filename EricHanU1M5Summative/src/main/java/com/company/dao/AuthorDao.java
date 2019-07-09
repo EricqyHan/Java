@@ -10,11 +10,11 @@ public interface AuthorDao {
 
     List<Author> getAllAuthors();
 
-    Author getAuthor(int id);
+    Author getAuthor(int author_id);
 
     void updateAuthor(Author author);
 
-    void deleteAuthor(int id);
+    void deleteAuthor(int author_id);
 
 
 }

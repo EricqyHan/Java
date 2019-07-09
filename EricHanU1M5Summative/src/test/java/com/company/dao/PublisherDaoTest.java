@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
-public class PublisherDaoJdbcTemplateImplTest {
+public class PublisherDaoTest {
     @Autowired
     AuthorDao AuthorDao;
     @Autowired

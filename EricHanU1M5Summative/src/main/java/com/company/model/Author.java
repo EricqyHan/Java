@@ -90,7 +90,7 @@ public class Author {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Author author = (Author) o;
-        return getAuthor_id() == author.getAuthor_id() &&
+        return author_id == author.getAuthor_id() &&
                 Objects.equals(getFirstName(), author.getFirstName()) &&
                 Objects.equals(getLastName(), author.getLastName()) &&
                 Objects.equals(getStreet(), author.getStreet()) &&

@@ -27,7 +27,7 @@ public class AuthorDaoJdbcTemplateImpl implements AuthorDao{
             "update author set first_name = ?, last_name = ?, street = ?, city = ?, state = ?, postal_code = ?, phone = ?, email = ? where author_id = ?";
 
     private static final String DELETE_ALBUM =
-            "delete from author where author_ID = ?";
+            "delete from author where author_id = ?";
 
     private JdbcTemplate jdbcTemplate;
 
@@ -37,10 +37,10 @@ public class AuthorDaoJdbcTemplateImpl implements AuthorDao{
     }
 
     @Override
-    public Author getAuthor(int id) {
+    public Author getAuthor(int author_id) {
 
         try {
-            return jdbcTemplate.queryForObject(SELECT_AUTHOR_SQL, this::mapRowToAuthor, id);
+            return jdbcTemplate.queryForObject(SELECT_AUTHOR_SQL, this::mapRowToAuthor, author_id);
         } catch (EmptyResultDataAccessException e) {
             return null;
         }
@@ -90,8 +90,8 @@ public class AuthorDaoJdbcTemplateImpl implements AuthorDao{
     }
 
     @Override
-    public void deleteAuthor(int id) {
-        jdbcTemplate.update(DELETE_ALBUM, id);
+    public void deleteAuthor(int author_id) {
+        jdbcTemplate.update(DELETE_ALBUM, author_id);
 
     }
 

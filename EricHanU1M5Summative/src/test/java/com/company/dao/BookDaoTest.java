@@ -3,7 +3,6 @@ package com.company.dao;
 import com.company.model.Author;
 import com.company.model.Book;
 import com.company.model.Publisher;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,7 +18,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
-public class BookDaoJdbcTemplateImplTest {
+public class BookDaoTest {
 
     @Autowired
     AuthorDao AuthorDao;
@@ -198,7 +197,6 @@ public class BookDaoJdbcTemplateImplTest {
 
     @Test
     public void getBooksByAuthor() {
-
         Author author = new Author();
         author.setFirstName("Eric");
         author.setLastName("Han");
@@ -206,84 +204,81 @@ public class BookDaoJdbcTemplateImplTest {
         author.setCity("Springfield");
         author.setState("NY");
         author.setPostalCode("90210");
-        author.setPhone("555-555-2234");
-        author.setEmail("realEmail@gmail.com");
-
+        author.setPhone("555-345-2256");
+        author.setEmail("realmail@gmail.com");
         author = AuthorDao.addAuthor(author);
 
-        Author author2 = new Author();
-        author.setFirstName("Han");
-        author.setLastName("Solo");
-        author.setStreet("Star Wars Road");
-        author.setCity("Corellian");
-        author.setState("NY");
-        author.setPostalCode("11111");
-        author.setPhone("421-421-1977");
-        author.setEmail("HanSolo@MillenniumFalcon.com");
+        Author author1 = new Author();
+        author1.setFirstName("Han");
+        author1.setLastName("Solo");
+        author1.setStreet("Star Wars Road");
+        author1.setCity("Cloud City");
+        author1.setState("CA");
+        author1.setPostalCode("90210");
+        author1.setPhone("555-421-9083");
+        author1.setEmail("HanSolo@MillenniumFalcon.com");
+        author1 = AuthorDao.addAuthor(author1);
 
+        Author author2 = new Author();
+        author2.setFirstName("Lando");
+        author2.setLastName("Calrissian");
+        author2.setStreet("Geroge Lucas Road");
+        author2.setCity("Cloud City");
+        author2.setState("TX");
+        author2.setPostalCode("54321");
+        author2.setPhone("555-444-2222");
+        author2.setEmail("Lando@CloudCity.com");
         author2 = AuthorDao.addAuthor(author2);
 
-        Author author3 = new Author();
-        author.setFirstName("Lando");
-        author.setLastName("Calrissian");
-        author.setStreet("George Lucas Court");
-        author.setCity("Cloud City");
-        author.setState("KY");
-        author.setPostalCode("54321");
-        author.setPhone("555-678-1300");
-        author.setEmail("HanSolo@MillenniumFalcon.com");
+        Publisher pub = new Publisher();
+        pub.setName("Fin");
+        pub.setStreet("Court Street");
+        pub.setCity("Solo City");
+        pub.setState("NJ");
+        pub.setPostalCode("07936");
+        pub.setPhone("555-999-3456");
+        pub.setEmail("Fin@NewEmpire.com");
+        pub = PublisherDao.addPublisher(pub);
 
-        author3 = AuthorDao.addAuthor(author3);
-
-        Publisher publisher = new Publisher();
-        publisher.setName("Fin");
-        publisher.setStreet("Court Street");
-        publisher.setCity("Solo City");
-        publisher.setState("NJ");
-        publisher.setPostalCode("07936");
-        publisher.setPhone("555-999-4231");
-        publisher.setEmail("MM@gmail.com");
-
-        publisher = PublisherDao.addPublisher(publisher);
 
         Book book = new Book();
-        book.setIsbn("111111");
-        book.setPublish_date(LocalDate.of(1990, 1, 1));
-        book.setAuthorId(author.getAuthor_id());
+        book.setIsbn("11111111");
+        book.setPublish_date(LocalDate.of(1990, 9, 11));
+        book.setAuthorId(author.getAuthor_id()); //access to authorID
         book.setTitle("A New Hope");
-        book.setPublisherId(publisher.getPublisherId());
-        book.setPrice(new BigDecimal("3.50"));
+        book.setPublisherId(pub.getPublisherId()); //access to publisherID
+        book.setPrice(new BigDecimal("17.99"));
 
-        BookDao.addBook(book);
-
-        book = new Book();
-        book.setIsbn("222222");
-        book.setPublish_date(LocalDate.of(1980, 5, 21));
-        book.setAuthorId(author.getAuthor_id());
-        book.setTitle("Empire Strikes Back");
-        book.setPublisherId(publisher.getPublisherId());
-        book.setPrice(new BigDecimal("18.50"));
-
-        BookDao.addBook(book);
+        book = BookDao.addBook(book);
 
         Book book1 = new Book();
-        book1.setIsbn("333333");
-        book1.setPublish_date(LocalDate.of(1983, 5, 25));
-        book1.setAuthorId(author2.getAuthor_id());
-        book1.setTitle("Return of the Jedi");
-        book1.setPublisherId(publisher.getPublisherId());
-        book1.setPrice(new BigDecimal("9.50"));
+        book1.setIsbn("2222222222");
+        book1.setPublish_date(LocalDate.of(2010, 11, 28));
+        book1.setAuthorId(author1.getAuthor_id());
+        book1.setTitle("Young Justice");
+        book1.setPublisherId(pub.getPublisherId());
+        book1.setPrice(new BigDecimal("3.50"));
 
-        BookDao.addBook(book);
+        book1 = BookDao.addBook(book1);
+
+        book1 = new Book();
+        book1.setIsbn("7774488");
+        book1.setPublish_date(LocalDate.of(2013, 12, 11));
+        book1.setAuthorId(author1.getAuthor_id());
+        book1.setTitle("The Jedi");
+        book1.setPublisherId(pub.getPublisherId());
+        book1.setPrice(new BigDecimal("9.99"));
+
+        book1 = BookDao.addBook(book1);
 
         List<Book> bList = BookDao.getBooksByAuthor(author.getAuthor_id());
+        assertEquals(bList.size(), 1);
+
+        bList = BookDao.getBooksByAuthor(author1.getAuthor_id());
         assertEquals(bList.size(), 2);
 
-        List<Book> bList2 = BookDao.getBooksByAuthor(author2.getAuthor_id());
-        assertEquals(bList2.size(), 1);
-
-        List<Book> bList3 = BookDao.getBooksByAuthor(author3.getAuthor_id());
-        assertEquals(bList3.size(), 0);
+        bList = BookDao.getBooksByAuthor(author2.getAuthor_id());
+        assertEquals(bList.size(), 0);
 
     }
 }
