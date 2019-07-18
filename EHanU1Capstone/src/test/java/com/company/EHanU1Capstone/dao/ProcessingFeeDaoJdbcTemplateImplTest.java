@@ -22,10 +22,10 @@ public class ProcessingFeeDaoJdbcTemplateImplTest {
 
     @Test
     public void getProcessingFee() {
-        ProcessingFee processingFee = processingFeeDao.getProcessingFee("Consoles");
+        ProcessingFee processingFee = processingFeeDao.getProcessingFee("Console");
 
         ProcessingFee consoleFee = new ProcessingFee();
-        consoleFee.setProductType("Consoles");
+        consoleFee.setProductType("Console");
         consoleFee.setFee(new BigDecimal("14.99"));
 
         assertEquals(consoleFee, processingFee);

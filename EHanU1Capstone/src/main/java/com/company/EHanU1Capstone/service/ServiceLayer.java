@@ -1,205 +1,321 @@
 package com.company.EHanU1Capstone.service;
 
 import com.company.EHanU1Capstone.dao.*;
-import com.company.EHanU1Capstone.model.*;
+import com.company.EHanU1Capstone.model.Console;
+import com.company.EHanU1Capstone.model.Game;
+import com.company.EHanU1Capstone.model.Invoice;
+import com.company.EHanU1Capstone.model.TShirt;
 import com.company.EHanU1Capstone.viewmodel.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
+@Component
 public class ServiceLayer {
-
     ConsoleDao consoleDao;
-    GameDao gameDao;
+    GameDao gamesDao;
     InvoiceDao invoiceDao;
     ProcessingFeeDao processingFeeDao;
-    SalesTaxRateDao salesTaxRateDao;
-    TShirtDao tShirtDao;
+    SalesTaxRateDao salesTaxDao;
+    TShirtDao tShirtsDao;
 
     @Autowired
-    public ServiceLayer(ConsoleDao consoleDao, GameDao gameDao, InvoiceDao invoiceDao, ProcessingFeeDao processingFeeDao, SalesTaxRateDao salesTaxRateDao, TShirtDao tShirtDao) {
+    public ServiceLayer(ConsoleDao consoleDao, GameDao gamesDao, InvoiceDao invoiceDao, ProcessingFeeDao processingFeeDao, SalesTaxRateDao salesTaxDao, TShirtDao tShirtsDao) {
         this.consoleDao = consoleDao;
-        this.gameDao = gameDao;
+        this.gamesDao = gamesDao;
         this.invoiceDao = invoiceDao;
         this.processingFeeDao = processingFeeDao;
-        this.salesTaxRateDao = salesTaxRateDao;
-        this.tShirtDao = tShirtDao;
+        this.salesTaxDao = salesTaxDao;
+        this.tShirtsDao = tShirtsDao;
     }
 
+    ///////// API //////////
 
-    /////////////// API //////////////
-    // Console API
-    public ConsoleViewModel saveConsole(ConsoleViewModel consoleViewModel){
+    ///////// Console /////////
+    public List<ConsoleViewModel> findAllConsoles(){
+        List<Console> consoleList = consoleDao.getAllConsoles();
+        List<ConsoleViewModel> consoleViewModelList = new ArrayList<>();
+
+        consoleList.stream()
+                .forEach(console -> {
+                    ConsoleViewModel consoleViewModel = buildConsoleViewModel(console);
+                    consoleViewModelList.add(consoleViewModel);
+                });
+        return consoleViewModelList;
+    }
+
+    public ConsoleViewModel saveConsole(ConsoleViewModel consoleViewModel) {
+
         Console console = new Console();
-        console.setConsoleID(consoleViewModel.getConsoleID());
         console.setModel(consoleViewModel.getModel());
         console.setManufacturer(consoleViewModel.getManufacturer());
         console.setMemoryAmount(consoleViewModel.getMemoryAmount());
-        console.setProcessor(consoleViewModel.getMemoryAmount());
+        console.setProcessor(consoleViewModel.getProcessor());
         console.setPrice(consoleViewModel.getPrice());
         console.setQuantity(consoleViewModel.getQuantity());
+        console =  consoleDao.addConsole(console);
 
         consoleViewModel.setConsoleID(console.getConsoleID());
         return consoleViewModel;
-
     }
 
-    public void updateConsole(ConsoleViewModel consoleViewModel){
-        Console console = new Console();
-        console.setConsoleID(consoleViewModel.getConsoleID());
-        console.setModel(consoleViewModel.getModel());
-        console.setManufacturer(consoleViewModel.getManufacturer());
-        console.setMemoryAmount(consoleViewModel.getMemoryAmount());
-        console.setProcessor(consoleViewModel.getMemoryAmount());
-        console.setPrice(consoleViewModel.getPrice());
-        console.setQuantity(consoleViewModel.getQuantity());
+    public ConsoleViewModel findConsolesbyId(int id) {
 
-        consoleDao.updateConsole(console);
-    }
-
-    public ConsoleViewModel findConsoleByid(int id) {
-        Console console = consoleDao.getConsole(id);
-        if(console == null)
+        Console consoles =  consoleDao.getConsole(id);
+        if(consoles == null)
             return null;
         else
-            return buildConsoleViewModel(console);
+            return buildConsoleViewModel(consoles);
     }
 
+
     public void removeConsole(int id) {
+
         consoleDao.deleteConsole(id);
     }
 
 
-    //////////////////////
-    // Game API
-    public GameViewModel saveGame(GameViewModel gameViewModel) {
-        Game game = new Game();
-        game.setGameID(gameViewModel.getGameID());
-        game.setTitle(gameViewModel.getTitle());
-        game.setEsrbRating(gameViewModel.getEsrbRating());
-        game.setDescription(gameViewModel.getDescription());
-        game.setPrice(gameViewModel.getPrice());
-        game.setStudio(gameViewModel.getStudio());
-        game.setQuantity(gameViewModel.getQuantity());
+    public void updateConsole(ConsoleViewModel consoleViewModel){
 
-        gameViewModel.setGameID(game.getGameID());
-        return gameViewModel;
+        Console consoles = new Console();
+        consoles.setConsoleID(consoleViewModel.getConsoleID());
+        consoles.setModel(consoleViewModel.getModel());
+        consoles.setManufacturer(consoleViewModel.getManufacturer());
+        consoles.setMemoryAmount(consoleViewModel.getMemoryAmount());
+        consoles.setProcessor(consoleViewModel.getProcessor());
+        consoles.setPrice(consoleViewModel.getPrice());
+        consoles.setQuantity(consoleViewModel.getQuantity());
+
+
+        consoleDao.updateConsole(consoles);
+    }
+
+    public List<ConsoleViewModel> findConsolesByManufacturer(String manufacturer){
+
+        List<Console> consolesList = consoleDao.getConsoleByManufacturer(manufacturer);
+        List<ConsoleViewModel> consoleViewModelList = new ArrayList<>();
+
+        consolesList.stream()
+                .forEach(consoles -> {
+                    ConsoleViewModel cvm = buildConsoleViewModel(consoles);
+                    consoleViewModelList.add(cvm);
+                });
+        return consoleViewModelList;
     }
 
 
-    public void updateGame(GameViewModel gameViewModel){
-        Game game = new Game();
-        game.setGameID(gameViewModel.getGameID());
-        game.setTitle(gameViewModel.getTitle());
-        game.setEsrbRating(gameViewModel.getEsrbRating());
-        game.setDescription(gameViewModel.getDescription());
-        game.setPrice(gameViewModel.getPrice());
-        game.setStudio(gameViewModel.getStudio());
-        game.setQuantity(gameViewModel.getQuantity());
+    ///////// Game /////////
 
-        gameDao.updateGame(game);
+    public List<GameViewModel> findAllGames(){
+
+        List<Game> gamesList = gamesDao.getAllGames();
+        List<GameViewModel> gamesViewModelList = new ArrayList<>();
+
+        gamesList.stream()
+                .forEach(games -> {
+                    GameViewModel tvm = buildGameViewModel(games);
+                    gamesViewModelList.add(tvm);
+                });
+        return gamesViewModelList;
     }
 
-    public GameViewModel findGameById(int id){
-        Game game = gameDao.getGame(id);
-        if(game == null)
+    public GameViewModel saveGame(GameViewModel gamesViewModel) {
+
+        Game games = new Game();
+
+        games.setTitle(gamesViewModel.getTitle());
+        games.setEsrbRating(gamesViewModel.getEsrbRating());
+        games.setDescription(gamesViewModel.getDescription());
+        games.setPrice(gamesViewModel.getPrice());
+        games.setStudio(gamesViewModel.getStudio());
+        games.setQuantity(gamesViewModel.getQuantity());
+
+        games =  gamesDao.addGame(games);
+
+        gamesViewModel.setGameID(games.getGameID());
+        return gamesViewModel;
+
+
+
+    }
+
+    public GameViewModel findGamesbyId(int id) {
+
+        Game games =  gamesDao.getGame(id);
+        if(games == null)
             return null;
         else
-            return buildGameViewModel(game);
+            return buildGameViewModel(games);
+
     }
 
     public void removeGame(int id){
-        gameDao.deleteGame(id);
+
+        gamesDao.deleteGame(id);
     }
 
-    /////////// Invoice ////////////
+    public void updateGame(GameViewModel gamesViewModel){
 
-    public InvoiceViewModel saveInvoice(InvoiceViewModel invoiceViewModel) {
-        Invoice invoice =  new Invoice();
-        invoice.setName(invoiceViewModel.getName());
-        invoice.setStreet(invoiceViewModel.getStreet());
-        invoice.setCity(invoiceViewModel.getState());
-        invoice.setState(invoiceViewModel.getZipcode());
-        invoice.setZipcode(invoiceViewModel.getZipcode());
-        invoice.setItemType(invoiceViewModel.getItemType());
-        invoice.setItemID(invoiceViewModel.getItemID());
-        invoice.setUnitPrice(invoiceViewModel.getUnitPrice());
-        invoice.setQuantity(invoiceViewModel.getQuantity());
-        invoice.setSubtotal(invoiceViewModel.getSubtotal());
-        invoice.setTax(invoiceViewModel.getTax());
-        invoice.setProcessingFee(invoiceViewModel.getProcessingFee());
-        invoice.setTotal(invoiceViewModel.getTax());
+        Game games = new Game();
+
+        games.setGameID(gamesViewModel.getGameID());
+        games.setTitle(gamesViewModel.getTitle());
+        games.setEsrbRating(gamesViewModel.getEsrbRating());
+        games.setDescription(gamesViewModel.getDescription());
+        games.setPrice(gamesViewModel.getPrice());
+        games.setStudio(gamesViewModel.getStudio());
+        games.setQuantity(gamesViewModel.getQuantity());
 
 
-        invoiceViewModel.setItemID(invoice.getItemID());
-        return invoiceViewModel;
+        gamesDao.updateGame(games);
 
     }
 
-    public void updateInvoice(InvoiceViewModel invoiceViewModel){
-        Invoice invoice =  new Invoice();
-        invoice.setName(invoiceViewModel.getName());
-        invoice.setStreet(invoiceViewModel.getStreet());
-        invoice.setCity(invoiceViewModel.getState());
-        invoice.setState(invoiceViewModel.getZipcode());
-        invoice.setZipcode(invoiceViewModel.getZipcode());
-        invoice.setItemType(invoiceViewModel.getItemType());
-        invoice.setItemID(invoiceViewModel.getItemID());
-        invoice.setUnitPrice(invoiceViewModel.getUnitPrice());
-        invoice.setQuantity(invoiceViewModel.getQuantity());
-        invoice.setSubtotal(invoiceViewModel.getSubtotal());
-        invoice.setTax(invoiceViewModel.getTax());
-        invoice.setProcessingFee(invoiceViewModel.getProcessingFee());
-        invoice.setTotal(invoiceViewModel.getTax());
+    public List<GameViewModel> findGamesByStudio(String studio){
 
-        invoiceDao.updateInvoice(invoice);
+        List<Game> gamesList = gamesDao.getGameByStudio(studio);
+        List<GameViewModel> gamesViewModelList = new ArrayList<>();
+
+        gamesList.stream()
+                .forEach(games -> {
+                    GameViewModel gvm = buildGameViewModel(games);
+                    gamesViewModelList.add(gvm);
+                });
+        return gamesViewModelList;
+    }
+
+    public List<GameViewModel> findGamesByErsb(String ersb){
+
+        List<Game> gamesList = gamesDao.getGameByESRBRating(ersb);
+        List<GameViewModel> gamesViewModelList = new ArrayList<>();
+
+        gamesList.stream()
+                .forEach(games -> {
+                    GameViewModel gvm = buildGameViewModel(games);
+                    gamesViewModelList.add(gvm);
+                });
+        return gamesViewModelList;
+    }
+
+    public List<GameViewModel> findGamesByTitle(String title){
+
+        List<Game> gamesList = gamesDao.getGameByTitle(title);
+        List<GameViewModel> gamesViewModelList = new ArrayList<>();
+
+        gamesList.stream()
+                .forEach(games -> {
+                    GameViewModel gvm = buildGameViewModel(games);
+                    gamesViewModelList.add(gvm);
+                });
+        return gamesViewModelList;
+    }
+
+    ////////////// TShirts ///////////////
+
+    public List<TShirtViewModel> findAllTShirts(){
+
+        List<TShirt> tShirtsList = tShirtsDao.getAllTShirts();
+        List<TShirtViewModel> tshirtsViewModelList = new ArrayList<>();
+
+        tShirtsList.stream()
+                .forEach(tShirts -> {
+                    TShirtViewModel tvm = buildTShirtViewModel(tShirts);
+                    tshirtsViewModelList.add(tvm);
+                });
+        return tshirtsViewModelList;
     }
 
 
-    public updateView
 
+    public TShirtViewModel saveTShirt(TShirtViewModel tshirtsViewModel) {
 
+        TShirt tShirts = new TShirt();
 
+        tShirts.setSize(tshirtsViewModel.getSize());
+        tShirts.setColor(tshirtsViewModel.getColor());
+        tShirts.setDescription(tshirtsViewModel.getDescription());
+        tShirts.setPrice(tshirtsViewModel.getPrice());
+        tShirts.setQuantity(tshirtsViewModel.getQuantity());
 
+        tShirts =  tShirtsDao.addTShirt(tShirts);
 
-    /////////// TShirt ////////////
-    public TShirtViewModel saveTShirt(TShirtViewModel tShirtViewModel) {
-        TShirt tShirt = new TShirt();
-        tShirt.settShirtID(tShirtViewModel.gettShirtID());
-        tShirt.setSize(tShirtViewModel.getSize());
-        tShirt.setColor(tShirtViewModel.getColor());
-        tShirt.setDescription(tShirtViewModel.getDescription());
-        tShirt.setPrice(tShirtViewModel.getPrice());
-        tShirt.setQuantity(tShirtViewModel.getQuantity());
-
-        tShirtViewModel.settShirtID(tShirt.gettShirtID());
-        return tShirtViewModel;
+        tshirtsViewModel.settShirtID(tShirts.gettShirtID());
+        return tshirtsViewModel;
     }
 
-    public void updateTShirt(TShirtViewModel tShirtViewModel){
-        TShirt tShirt = new TShirt();
-        tShirt.settShirtID(tShirtViewModel.gettShirtID());
-        tShirt.setSize(tShirtViewModel.getSize());
-        tShirt.setColor(tShirtViewModel.getColor());
-        tShirt.setDescription(tShirtViewModel.getDescription());
-        tShirt.setPrice(tShirtViewModel.getPrice());
-        tShirt.setQuantity(tShirtViewModel.getQuantity());
+    public TShirtViewModel findTShirtsbyId(int id) {
 
-        tShirtDao.updateTShirt(tShirt);
-    }
-
-
-    public void removeTShirt(int id){
-        tShirtDao.deleteTShirt(id);
-    }
-
-
-    public TShirtViewModel findTShirtById(int id){
-        TShirt tshirt = tShirtDao.getTShirt(id);
-        if(tshirt == null)
+        TShirt tShirts =  tShirtsDao.getTShirt(id);
+        if(tShirts == null)
             return null;
         else
-            return buildTShirtViewModel(tshirt);
+            return buildTShirtViewModel(tShirts);
     }
+
+    public void removeTShirt(int id){
+
+        tShirtsDao.deleteTShirt(id);
+    }
+
+    public void updateTShirt(TShirtViewModel tshirtsViewModel){
+
+        TShirt tShirts = new TShirt();
+
+        tShirts.settShirtID(tshirtsViewModel.gettShirtID());
+        tShirts.setSize(tshirtsViewModel.getSize());
+        tShirts.setColor(tshirtsViewModel.getColor());
+        tShirts.setDescription(tshirtsViewModel.getDescription());
+        tShirts.setPrice(tshirtsViewModel.getPrice());
+        tShirts.setQuantity(tshirtsViewModel.getQuantity());
+
+        tShirtsDao.updateTShirt(tShirts);
+    }
+
+    public List<TShirtViewModel> findTShirtsByColor(String color){
+
+        List<TShirt> tShirtsList = tShirtsDao.gettShirtByColor(color);
+        List<TShirtViewModel> tshirtsViewModelList = new ArrayList<>();
+
+        tShirtsList.stream()
+                .forEach(tShirts -> {
+                    TShirtViewModel tvm = buildTShirtViewModel(tShirts);
+                    tshirtsViewModelList.add(tvm);
+                });
+        return tshirtsViewModelList;
+    }
+
+    public List<TShirtViewModel> findTShirtsBySize(String size){
+
+        List<TShirt> tShirtsList = tShirtsDao.gettShirtBySize(size);
+        List<TShirtViewModel> tshirtsViewModelList = new ArrayList<>();
+
+        tShirtsList.stream()
+                .forEach(tShirts -> {
+                    TShirtViewModel tShirtViewModel = buildTShirtViewModel(tShirts);
+                    tshirtsViewModelList.add(tShirtViewModel);
+                });
+        return tshirtsViewModelList;
+    }
+
+    /////////////// Logic //////////////
+//
+//    public InvoiceViewModel saveInvoice(PurchasingViewModel purchasingViewModel) {
+//        Invoice invoice = new Invoice();
+//
+//        invoice.setName(purchasingViewModel.getName());
+//        invoice.setStreet(purchasingViewModel.getStreet());
+//        invoice.setCity(purchasingViewModel.getCity());
+//        invoice.setState(purchasingViewModel.getState());
+//        invoice.setZipcode(purchasingViewModel.getZipCode());
+//        invoice.setItemID(purchasingViewModel.getItemId());
+//        invoice.setItemType(purchasingViewModel.getItemType());
+//        invoice.setQuantity(purchasingViewModel.getQuantity());
+//    }
+
+
+
 
 
 
@@ -250,21 +366,7 @@ public class ServiceLayer {
         return invoiceViewModel;
     }
 
-    private ProcessingFeeViewModel buildProcessingFeeViewModel(ProcessingFee processingFee) {
-        ProcessingFeeViewModel processingFeeViewModel = new ProcessingFeeViewModel();
-        processingFee.setProductType(processingFee.getProductType());
-        processingFee.setFee(processingFee.getFee());
 
-        return processingFeeViewModel;
-    }
-
-    private SalesTaxRateViewModel buildSalesTaxRateViewModel(SalesTaxRate salesTaxRate) {
-        SalesTaxRateViewModel salesTaxRateViewModel = new SalesTaxRateViewModel();
-        salesTaxRate.setState(salesTaxRate.getState());
-        salesTaxRate.setRate(salesTaxRate.getRate());
-
-        return salesTaxRateViewModel;
-    }
 
     private TShirtViewModel buildTShirtViewModel(TShirt tShirt) {
         TShirtViewModel tShirtViewModel = new TShirtViewModel();
@@ -276,8 +378,8 @@ public class ServiceLayer {
         tShirtViewModel.setQuantity(tShirt.getQuantity());
 
         return tShirtViewModel;
-
     }
 
 
-}
+
+    }

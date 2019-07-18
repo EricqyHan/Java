@@ -29,8 +29,8 @@ public class ConsoleDaoJdbcTemplateImplTest {
 //            gameDao.deleteGame(g.getGameID());
 //        }
 //
-      List<Console> console = consoleDao.getAllConsoles();
-        for(Console c : console) {
+      List<Console> consoles = consoleDao.getAllConsoles();
+        for(Console c : consoles) {
             consoleDao.deleteConsole(c.getConsoleID());
         }
 //
@@ -115,7 +115,7 @@ public class ConsoleDaoJdbcTemplateImplTest {
 
         consoleDao.addConsole(console);
 
-        List<Console>consoleList = consoleDao.getConsoleByManufacturer(console.getManufacturer());
+        List<Console> consoleList = consoleDao.getConsoleByManufacturer(console.getManufacturer());
         assertEquals(1, consoleList.size());
 
 

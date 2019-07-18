@@ -6,31 +6,18 @@ import java.util.Objects;
 
 public class InvoiceViewModel {
     private int invoiceID;
-    @NotEmpty(message = "Please supply a value for name")
     private String name;
-    @NotEmpty(message = "Please supply a value for street")
     private String street;
-    @NotEmpty(message = "Please supply a value for city")
     private String city;
-    @NotEmpty(message = "Please supply a value for message")
     private String state;
-    @NotEmpty(message = "Please supply a value for zipcode")
     private String zipcode;
-    @NotEmpty(message = "Please supply a value for itemType")
     private String itemType;
-    @NotEmpty(message = "Please supply a value for itemID")
     private int itemID;
-    @NotEmpty(message = "Please supply a value for unitPrice")
     private BigDecimal unitPrice;
-    @NotEmpty(message = "Please supply a value for quantity")
     private int quantity;
-    @NotEmpty(message = "Please supply a value for subtotal")
     private BigDecimal subtotal;
-    @NotEmpty(message = "Please supply a value for tax")
     private BigDecimal tax;
-    @NotEmpty(message = "Please supply a value for processingFee")
     private BigDecimal processingFee;
-    @NotEmpty(message = "Please supply a value for total")
     private BigDecimal total;
 
     public int getInvoiceID() {
@@ -147,25 +134,26 @@ public class InvoiceViewModel {
 
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        InvoiceViewModel that = (InvoiceViewModel) o;
-        return invoiceID == that.invoiceID &&
-                itemID == that.itemID &&
-                quantity == that.quantity &&
-                name.equals(that.name) &&
-                street.equals(that.street) &&
-                city.equals(that.city) &&
-                state.equals(that.state) &&
-                zipcode.equals(that.zipcode) &&
-                itemType.equals(that.itemType) &&
-                unitPrice.equals(that.unitPrice) &&
-                subtotal.equals(that.subtotal) &&
-                tax.equals(that.tax) &&
-                processingFee.equals(that.processingFee) &&
-                total.equals(that.total);
+    public boolean equals(Object o){
+        if(this == o) return true;
+        if(o == null || getClass() != o.getClass()) return false;
+        InvoiceViewModel invoice = (InvoiceViewModel) o;
+        return getInvoiceID() == invoice.getInvoiceID() &&
+                Objects.equals(getName(),invoice.getName()) &&
+                Objects.equals(getStreet(),invoice.getStreet()) &&
+                Objects.equals(getCity(),invoice.getCity()) &&
+                Objects.equals(getState(),invoice.getState()) &&
+                Objects.equals(getZipcode(),invoice.getZipcode()) &&
+                Objects.equals(getItemType(),invoice.getItemType()) &&
+                Objects.equals(getItemID(),invoice.getItemID()) &&
+                Objects.equals(getUnitPrice(),invoice.getUnitPrice()) &&
+                Objects.equals(getQuantity(),invoice.getQuantity()) &&
+                Objects.equals(getSubtotal(),invoice.getSubtotal()) &&
+                Objects.equals(getTax(),invoice.getTax()) &&
+                Objects.equals(getProcessingFee(),invoice.getProcessingFee()) &&
+                Objects.equals(getTotal(),invoice.getTotal());
     }
+
 
     @Override
     public int hashCode() {

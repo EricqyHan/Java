@@ -80,13 +80,13 @@ public class GameViewModel {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         GameViewModel that = (GameViewModel) o;
-        return gameID == that.gameID &&
-                quantity == that.quantity &&
-                title.equals(that.title) &&
-                esrbRating.equals(that.esrbRating) &&
-                description.equals(that.description) &&
-                price.equals(that.price) &&
-                studio.equals(that.studio);
+        return getGameID() == that.getGameID() &&
+                Objects.equals(getTitle(), that.getTitle()) &&
+                Objects.equals(getEsrbRating(), that.getEsrbRating()) &&
+                Objects.equals(getDescription(), that.getDescription()) &&
+                Objects.equals(getPrice(), that.getPrice()) &&
+                Objects.equals(getStudio(), that.getStudio()) &&
+                Objects.equals(getQuantity(), that.getQuantity());
     }
 
     @Override

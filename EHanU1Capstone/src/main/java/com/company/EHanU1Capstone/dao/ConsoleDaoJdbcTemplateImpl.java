@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 @Repository
-public class ConsoleDaoJdbcTemplateImpl implements ConsoleDao{
+public class ConsoleDaoJdbcTemplateImpl implements ConsoleDao {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;

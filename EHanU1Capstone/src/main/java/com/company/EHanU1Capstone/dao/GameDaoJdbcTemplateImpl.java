@@ -1,6 +1,5 @@
 package com.company.EHanU1Capstone.dao;
 
-import com.company.EHanU1Capstone.model.Console;
 import com.company.EHanU1Capstone.model.Game;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;

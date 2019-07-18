@@ -1,5 +1,7 @@
 package com.company.EHanU1Capstone.viewmodel;
 
+import com.company.EHanU1Capstone.model.Console;
+
 import javax.validation.constraints.NotEmpty;
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -81,14 +83,15 @@ public class ConsoleViewModel {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ConsoleViewModel that = (ConsoleViewModel) o;
-        return consoleID == that.consoleID &&
-                quantity == that.quantity &&
-                model.equals(that.model) &&
-                manufacturer.equals(that.manufacturer) &&
-                memoryAmount.equals(that.memoryAmount) &&
-                processor.equals(that.processor) &&
-                price.equals(that.price);
+        Console that = (Console) o;
+        return  Objects.equals(getConsoleID(), that.getConsoleID()) &&
+                Objects.equals(getModel(), that.getModel()) &&
+                Objects.equals(getManufacturer(), that.getManufacturer()) &&
+                Objects.equals(getMemoryAmount(), that.getMemoryAmount()) &&
+                Objects.equals(getProcessor(), that.getProcessor()) &&
+                Objects.equals(getPrice(), that.getPrice()) &&
+                Objects.equals(getQuantity(), that.getQuantity());
+
     }
 
     @Override

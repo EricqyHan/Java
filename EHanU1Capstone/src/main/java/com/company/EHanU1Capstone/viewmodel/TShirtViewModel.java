@@ -1,5 +1,7 @@
 package com.company.EHanU1Capstone.viewmodel;
 
+import com.company.EHanU1Capstone.model.TShirt;
+
 import javax.validation.constraints.Negative;
 import javax.validation.constraints.NotEmpty;
 import java.math.BigDecimal;
@@ -72,12 +74,12 @@ public class TShirtViewModel {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         TShirtViewModel that = (TShirtViewModel) o;
-        return tShirtID == that.tShirtID &&
-                quantity == that.quantity &&
-                size.equals(that.size) &&
-                color.equals(that.color) &&
-                description.equals(that.description) &&
-                price.equals(that.price);
+        return gettShirtID() == that.gettShirtID() &&
+                Objects.equals(getSize(), that.getSize()) &&
+                Objects.equals(getColor(), that.getColor()) &&
+                Objects.equals(getDescription(), that.getDescription()) &&
+                Objects.equals(getPrice(), that.getPrice()) &&
+                Objects.equals(getQuantity(), that.getQuantity());
     }
 
     @Override

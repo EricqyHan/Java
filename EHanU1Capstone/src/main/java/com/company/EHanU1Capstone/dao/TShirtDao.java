@@ -1,7 +1,5 @@
 package com.company.EHanU1Capstone.dao;
 
-import com.company.EHanU1Capstone.model.Console;
-import com.company.EHanU1Capstone.model.Game;
 import com.company.EHanU1Capstone.model.TShirt;
 
 import java.util.List;
