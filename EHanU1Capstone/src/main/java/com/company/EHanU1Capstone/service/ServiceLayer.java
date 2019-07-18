@@ -9,6 +9,8 @@ import com.company.EHanU1Capstone.viewmodel.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -221,8 +223,8 @@ public class ServiceLayer {
 
         tShirtsList.stream()
                 .forEach(tShirts -> {
-                    TShirtViewModel tvm = buildTShirtViewModel(tShirts);
-                    tshirtsViewModelList.add(tvm);
+                    TShirtViewModel tShirtViewModel = buildTShirtViewModel(tShirts);
+                    tshirtsViewModelList.add(tShirtViewModel);
                 });
         return tshirtsViewModelList;
     }
@@ -280,8 +282,8 @@ public class ServiceLayer {
 
         tShirtsList.stream()
                 .forEach(tShirts -> {
-                    TShirtViewModel tvm = buildTShirtViewModel(tShirts);
-                    tshirtsViewModelList.add(tvm);
+                    TShirtViewModel tShirtViewModel = buildTShirtViewModel(tShirts);
+                    tshirtsViewModelList.add(tShirtViewModel);
                 });
         return tshirtsViewModelList;
     }
@@ -300,25 +302,90 @@ public class ServiceLayer {
     }
 
     /////////////// Logic //////////////
-//
-//    public InvoiceViewModel saveInvoice(PurchasingViewModel purchasingViewModel) {
-//        Invoice invoice = new Invoice();
-//
-//        invoice.setName(purchasingViewModel.getName());
-//        invoice.setStreet(purchasingViewModel.getStreet());
-//        invoice.setCity(purchasingViewModel.getCity());
-//        invoice.setState(purchasingViewModel.getState());
-//        invoice.setZipcode(purchasingViewModel.getZipCode());
-//        invoice.setItemID(purchasingViewModel.getItemId());
-//        invoice.setItemType(purchasingViewModel.getItemType());
-//        invoice.setQuantity(purchasingViewModel.getQuantity());
-//    }
+
+    public InvoiceViewModel saveInvoice(PurchasingViewModel purchasingViewModel) {
+        Invoice invoice = new Invoice();
+
+        invoice.setName(purchasingViewModel.getName());
+        invoice.setStreet(purchasingViewModel.getStreet());
+        invoice.setCity(purchasingViewModel.getCity());
+        invoice.setState(purchasingViewModel.getState());
+        invoice.setZipcode(purchasingViewModel.getZipCode());
+        invoice.setItemID(purchasingViewModel.getItemId());
+        invoice.setItemType(purchasingViewModel.getItemType());
+        invoice.setQuantity(purchasingViewModel.getQuantity());
+
+        // Calculations
+        BigDecimal unitPrice;
+        BigDecimal subtotal;
+        BigDecimal tax;
+        BigDecimal fees;
+        BigDecimal total;
+
+        if(invoice.getItemType().equals("Console")){
+
+            Console console = consoleDao.getConsole(invoice.getItemID());
+            unitPrice = console.getPrice();
+
+            if (invoice.getQuantity() > console.getQuantity()){
+                throw new IllegalArgumentException("Not enough items in stock");
+            }else {
+                console.setQuantity(console.getQuantity()-invoice.getQuantity());
+                consoleDao.updateConsole(console);
+            }
+        }else if (invoice.getItemType().equals("Game")){
+
+            Game game = gamesDao.getGame(invoice.getItemID());
+            unitPrice = game.getPrice();
+
+            if (invoice.getQuantity() > game.getQuantity()){
+                throw new IllegalArgumentException("Not enough items in stock");
+            }else {
+                game.setQuantity(game.getQuantity()-invoice.getQuantity());
+                gamesDao.updateGame(game);
+            }
 
 
+        }else if (invoice.getItemType().equals("T-Shirts")){
 
+            TShirt tShirt = tShirtsDao.getTShirt(invoice.getItemID());
+            unitPrice = tShirt.getPrice();
 
+            if (invoice.getQuantity() > tShirt.getQuantity()){
+                throw new IllegalArgumentException("Not enough items in stock");
+            }else {
+                tShirt.setQuantity(tShirt.getQuantity()-invoice.getQuantity());
+                tShirtsDao.updateTShirt(tShirt);
+            }
 
+        }else{
+            throw new IllegalArgumentException("Product type is not correct");
+        }
 
+        //
+        subtotal = unitPrice.multiply(BigDecimal.valueOf(invoice.getQuantity())).setScale(2, RoundingMode.HALF_UP);
+
+        //
+        tax = salesTaxDao.getSalesTaxRate(invoice.getState()).getRate().multiply(subtotal).setScale(2,RoundingMode.HALF_UP);
+        //
+        fees = processingFeeDao.getProcessingFee(invoice.getItemType()).getFee();
+
+        if (invoice.getQuantity() > 10){
+            fees = fees.add(new BigDecimal(15.49)).setScale(2,RoundingMode.HALF_UP) ;
+        }
+        //
+        total = subtotal.add(tax).add(fees).setScale(2,RoundingMode.HALF_UP);
+        //
+        invoice.setUnitPrice(unitPrice);
+        invoice.setSubtotal(subtotal);
+        invoice.setTax(tax);
+        invoice.setProcessingFee(fees);
+        invoice.setTotal(total);
+
+        invoice =  invoiceDao.addInvoice(invoice);
+
+        return buildInvoiceViewModel(invoice);
+    }
 
     /////////////// Builders //////////////
 
