@@ -1,4 +1,4 @@
-package com.trilogyed.tasker.model;
+package com.trilogyed.tasker.viewmodel;
 
 import java.time.LocalDate;
 
