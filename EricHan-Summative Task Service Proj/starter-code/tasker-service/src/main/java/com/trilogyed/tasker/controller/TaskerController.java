@@ -1,6 +1,5 @@
 package com.trilogyed.tasker.controller;
 
-import com.trilogyed.tasker.model.Task;
 import com.trilogyed.tasker.service.TaskerServiceLayer;
 import com.trilogyed.tasker.model.TaskViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,10 +58,15 @@ public class TaskerController {
         return taskViewModel;
     }
 
+
     @RequestMapping(value = "/tasks/{id}", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.OK)
-    public void updateTask(@PathVariable("id") int id, TaskViewModel taskViewModel) {
+    public void updateTask(@RequestBody TaskViewModel taskViewModel, @PathVariable int id) {
+        if(id!=taskViewModel.getId()){
+            throw new IllegalArgumentException();
+        }
         service.updateTask(taskViewModel);
     }
+
 
 }

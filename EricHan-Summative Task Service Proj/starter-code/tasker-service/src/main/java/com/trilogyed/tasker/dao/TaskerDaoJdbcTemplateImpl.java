@@ -70,7 +70,8 @@ public class TaskerDaoJdbcTemplateImpl implements TaskerDao {
     @Override
     public void updateTask(Task task) {
 
-        jdbcTemplate.update(UPDATE_TASK,
+        jdbcTemplate.update(
+                UPDATE_TASK,
                 task.getDescription(),
                 task.getCreateDate(),
                 task.getDueDate(),
