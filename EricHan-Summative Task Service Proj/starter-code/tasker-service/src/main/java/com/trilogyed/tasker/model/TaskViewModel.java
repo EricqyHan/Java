@@ -1,12 +1,19 @@
-package com.trilogyed.tasker.viewmodel;
+package com.trilogyed.tasker.model;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class TaskViewModel {
     private int id;
+    @NotEmpty(message = "Please add description")
     private String description;
+    @NotNull(message = "Please enter a valid date")
     private LocalDate createDate;
+    @NotNull(message = "Please enter a valid date")
     private LocalDate dueDate;
+    @NotEmpty(message = "Please choose a valid category")
     private String category;
     private String advertisement;
 
@@ -56,6 +63,24 @@ public class TaskViewModel {
 
     public void setAdvertisement(String advertisement) {
         this.advertisement = advertisement;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TaskViewModel that = (TaskViewModel) o;
+        return getId() == that.getId() &&
+                Objects.equals(getDescription(), that.getDescription()) &&
+                Objects.equals(getCreateDate(), that.getCreateDate()) &&
+                Objects.equals(getDueDate(), that.getDueDate()) &&
+                Objects.equals(getCategory(), that.getCategory()) &&
+                Objects.equals(getAdvertisement(), that.getAdvertisement());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getDescription(), getCreateDate(), getDueDate(), getCategory(), getAdvertisement());
     }
 }
 

@@ -2,13 +2,12 @@ package com.trilogyed.tasker.service;
 
 import com.trilogyed.tasker.dao.TaskerDao;
 import com.trilogyed.tasker.model.Task;
-import com.trilogyed.tasker.viewmodel.TaskViewModel;
+import com.trilogyed.tasker.model.TaskViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
@@ -19,25 +18,45 @@ public class TaskerServiceLayer {
     TaskerDao taskerDao;
     @Autowired
     private DiscoveryClient discoveryClient;
+
     private RestTemplate restTemplate = new RestTemplate();
-    @Value("${myAdServiceName}")
-    private String myAdServiceName;
+
+    @Value("${myAdserve}")
+    private String myAdserve;
+
     @Value("${serviceProtocol}")
     private String serviceProtocol;
+
     @Value("${servicePath}")
     private String servicePath;
-    public String makeAd(){
-        List<ServiceInstance> instances = discoveryClient.getInstances(myAdServiceName);
-        String randomAdServiceUri = serviceProtocol + instances.get(0).getHost() + ":" + instances.get(0).getPort() + servicePath;
-        System.out.println(instances.get(0).getHost());
-        String ad = restTemplate.getForObject(randomAdServiceUri, String.class);
-        return ad;
-    }
 
+
+
+
+    //constructor
 
     @Autowired
     public TaskerServiceLayer(TaskerDao taskerDao) {
         this.taskerDao = taskerDao;
+    }
+
+    // Picking the adserver
+    public TaskerServiceLayer(TaskerDao taskerDao, DiscoveryClient discoveryClient, RestTemplate restTemplate, String myAdserve, String serviceProtocol, String servicePath) {
+        this.taskerDao = taskerDao;
+        this.discoveryClient = discoveryClient;
+        this.restTemplate = restTemplate;
+        this.myAdserve = myAdserve;
+        this.serviceProtocol = serviceProtocol;
+        this.servicePath = servicePath;
+    }
+
+    public String makeAd(){
+        List<ServiceInstance> instances = discoveryClient.getInstances(myAdserve);
+        String adServerServiceNameUri = serviceProtocol + instances.get(0).getHost() + ":" + instances.get(0).getPort() + servicePath;
+
+        //System.out.println(instances.get(0).getHost());
+        String ad = restTemplate.getForObject(adServerServiceNameUri, String.class);
+        return ad;
     }
 
 
@@ -50,6 +69,7 @@ public class TaskerServiceLayer {
         tvm.setDueDate(task.getDueDate());
         tvm.setCategory(task.getCategory());
         // TODO - get ad from Adserver and put in tvm
+        tvm.setAdvertisement(makeAd());
         return tvm;
     }
 
@@ -80,13 +100,16 @@ public class TaskerServiceLayer {
 
     public TaskViewModel saveTask(TaskViewModel taskViewModel) {
         Task task = new Task();
-        task.setDescription(task.getDescription());
+        task.setDescription(taskViewModel.getDescription());
         task.setCreateDate(taskViewModel.getCreateDate());
         task.setDueDate(taskViewModel.getDueDate());
         task.setCategory(taskViewModel.getCategory());
+
         task = taskerDao.createTask(task);
         taskViewModel.setId(task.getId());
+
         // TODO - get ad from Adserver and put in taskViewModel
+        taskViewModel.setAdvertisement(makeAd());
         return taskViewModel;
     }
 
@@ -114,6 +137,7 @@ public class TaskerServiceLayer {
         taskViewModel.setCreateDate(task.getCreateDate());
         taskViewModel.setDueDate(task.getDueDate());
         taskViewModel.setCategory(task.getCategory());
+        taskViewModel.setAdvertisement(makeAd());
         return taskViewModel;
     }
 
