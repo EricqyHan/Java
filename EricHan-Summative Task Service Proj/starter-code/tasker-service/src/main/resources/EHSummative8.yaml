@@ -1,0 +1,117 @@
+openapi: 3.0.0
+info:
+  title: This is either my YAMAL for Summative 7 or 8... I lost count
+  description: >-
+    A simple task-tracking CRUD web service for capstone 8 
+  version: 0.0.1
+servers:
+  - url: 'http://localhost:6108'
+    description: Local Dev Server
+paths:
+  /tasks:
+    post:
+      summary: Add a new task
+      requestBody:
+        description: Fields to create a new task
+        required: true
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/tasks'
+      responses:
+        201: 
+          description: Created
+        422:
+          description: Incomplete task item info. Some required fields are missing.
+    put:
+      summary: Update a task by id
+      responses:
+        200:
+          description: Update a task by id
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/tasks'
+        400:
+          description: Invalid request.
+    get:
+      summary: Get task
+      responses:
+        200:
+          description: Get task in the database
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/tasks'
+        400:
+          description: Invalid request.
+  /tasks/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema: 
+          type: integer
+        required: true
+        description: task ID
+    get:
+      summary: Get tasks by tasks ID
+      responses:
+        200:
+          description: Get task by tasks ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/tasks'
+        400:
+          description: "Invalid request."
+    delete:
+      summary: Delete a task by id
+      responses:
+        200:
+          description: Delete a task by id
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/tasks'
+        400:
+          description: Invalid request.
+  /tasks/category/{category}:
+    parameters:
+      - in: path
+        name: category
+        schema: 
+          type: integer
+        required: true
+        description: Tasks ID
+    get:
+      summary: Get task by ID
+      responses:
+        200:
+          description: Get task by tasks ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/tasks'
+        400:
+          description: Invalid request.
+
+components:
+  schemas:
+    tasks:
+      properties:
+        id:
+          type: integer
+        description:
+          type: string
+        createDate:
+          type: string
+        dueDate:
+          type: string
+        category:
+          type: string
+      required:
+        - id
+        - description
+        - createDate
+        - dueDate
+        - category
