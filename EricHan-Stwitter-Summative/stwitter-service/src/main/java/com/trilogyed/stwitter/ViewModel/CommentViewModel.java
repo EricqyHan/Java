@@ -1,15 +1,9 @@
-package com.trilogyed.comment.model;
-
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
+package com.trilogyed.stwitter.ViewModel;
 
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Comment {
-
+public class CommentViewModel {
 
     private int commentId;
     private int postId;
@@ -61,17 +55,16 @@ public class Comment {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Comment comment1 = (Comment) o;
-        return commentId == comment1.commentId &&
-                postId == comment1.postId &&
-                createDate.equals(comment1.createDate) &&
-                commenterName.equals(comment1.commenterName) &&
-                Objects.equals(comment, comment1.comment);
+        CommentViewModel that = (CommentViewModel) o;
+        return getCommentId() == that.getCommentId() &&
+                getPostId() == that.getPostId() &&
+                Objects.equals(getCreateDate(), that.getCreateDate()) &&
+                Objects.equals(getCommenterName(), that.getCommenterName()) &&
+                Objects.equals(getComment(), that.getComment());
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(commentId, postId, createDate, commenterName, comment);
     }
-
 }

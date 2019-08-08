@@ -1,4 +1,4 @@
-package com.trilogyed.comment.model;
+package com.trilogyed.stwitter.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -10,9 +10,10 @@ import java.util.Objects;
 
 public class Comment {
 
-
     private int commentId;
     private int postId;
+    @JsonDeserialize(using = LocalDateDeserializer.class)
+    @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate createDate;
     private String commenterName;
     private String comment;
@@ -58,6 +59,18 @@ public class Comment {
     }
 
     @Override
+    public String toString() {
+        return "Comment{" +
+                "commentId=" + commentId +
+                ", postId=" + postId +
+                ", createDate=" + createDate +
+                ", commenterName='" + commenterName + '\'' +
+                ", comment='" + comment + '\'' +
+                '}';
+    }
+
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -73,5 +86,4 @@ public class Comment {
     public int hashCode() {
         return Objects.hash(commentId, postId, createDate, commenterName, comment);
     }
-
 }

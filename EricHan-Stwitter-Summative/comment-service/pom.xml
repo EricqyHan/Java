@@ -46,6 +46,7 @@
 			<artifactId>spring-cloud-commons</artifactId>
 			<version>2.1.2.RELEASE</version>
 		</dependency>
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
